@@ -96,7 +96,7 @@
 	            <a href="#s1">分类</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        
+	                        <a class="category-link" href="/evanyoungblog.gitee.io/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a>
 	                    </ul>
 	        </li>
 	        
@@ -187,10 +187,10 @@
 <li><p>概念：对象的容器，定义了多个对象进行操作的常用方法。可实现  数组的功能。</p>
 </li>
 <li><p>和数组的区别：</p>
-<p>   1.数组长度固定，集合长度不固定。</p>
+<p>1.数组长度固定，集合长度不固定。</p>
 </li>
 </ul>
-<p>​     2.数组可以存储基本类型和引用类型，集合只能存储引用类型。</p>
+<p>​       2.数组可以存储基本类型和引用类型，集合只能存储引用类型。</p>
 <ul>
 <li>Java引用包：java.util.*;</li>
 </ul>
@@ -719,6 +719,596 @@ public class Demo2 &#123;
 <p><img src="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE3.PNG"></p>
 <p>至此，LinkedList对象的第一个数据添加完毕。假设需要再添加一个数据，我们可以再来走一遍，过程同上不再赘述，图示如下：</p>
 <p><img src="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE4.PNG"></p>
+<hr>
+<h2 id="ArrayList和LinkedList区别"><a href="#ArrayList和LinkedList区别" class="headerlink" title="ArrayList和LinkedList区别"></a>ArrayList和LinkedList区别</h2><ul>
+<li><p>ArrayList：必须开辟连续空间，查询快，增删慢。</p>
+</li>
+<li><p>LinkedList：无需开辟连续空间，查询慢，增删快。</p>
+<p><img src="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE5.PNG"></p>
+</li>
+</ul>
+<hr>
+<h2 id="泛型概述"><a href="#泛型概述" class="headerlink" title="泛型概述"></a>泛型概述</h2><ul>
+<li><p>Java泛型式JDK1.5中引入的一个新特性，其本质式参数化类型，把类型作为参数传递。</p>
+</li>
+<li><p>常见形式又泛型类、泛型接口、泛型方法。</p>
+</li>
+<li><p>语法:</p>
+<p>​    <code>&lt;T,…&gt; T称为类型占位符，表示一种引用类型。</code></p>
+</li>
+<li><p>好处：</p>
+<p> <code>提高代码的重用性。</code></p>
+<p><code>防止类型转换异常，提高代码的安全性。</code></p>
+</li>
+</ul>
+<h3 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h3><pre><code class="java">/**
+ * 泛型类
+ * 语法：类名&lt;T&gt;
+ * T是类型占位符，表示一种引用类型，编写多个使用逗号隔开
+ * 
+ */
+public class myGeneric&lt;T&gt;&#123;
+        //1.创建泛型变量
+        //不能使用new来创建，因为泛型式不确定的类型，野可能拥有私密的构造方法。
+        T t
+        //2.泛型作为方法的参数
+        public void show(T t)&#123;
+         System.out.println(t);
+        &#125;
+        //泛型作为方法的返回值
+        public T getT()&#123;
+                return t;
+        &#125;
+&#125;
+</code></pre>
+<p>&nbsp;</p>
+<pre><code>/**
+ * 注意：
+ * 1.泛型只能使用引用类型
+ * 2.不同泛型类型的对象不能相互赋值
+ */
+public class testGeneric &#123;
+    public static void main(String[] args) &#123;
+        //使用泛型类创建对象
+        myGeneric&lt;String&gt; myGeneric1=new myGeneric&lt;String&gt;();
+        myGeneric1.t=&quot;tang&quot;;
+        myGeneric1.show(&quot;he&quot;);
+        
+        myGeneric&lt;Integer&gt; myGeneric2=new myGeneric&lt;Integer&gt;();
+        myGeneric2.t=10;
+        myGeneric2.show(20);
+        Integer integer=myGeneric2.getT();
+    &#125;
+&#125;
+</code></pre>
+<p>泛型接口</p>
+<pre><code class="java">/**
+ * 泛型接口
+ * 语法：接口名&lt;T&gt;
+ * 注意：不能创建泛型静态常量
+ */
+public interface MyInterface&lt;T&gt;&#123;
+    //创建常量
+        String nameString=&quot;tang&quot;;
+        
+        T server(T t);
+&#125;
+</code></pre>
+<pre><code class="java">/**
+ * 实现接口时确定泛型类
+ */
+ public clas MyInterfaceImpl implements MyInterface&lt;String&gt;&#123;
+         @Override
+        public String server(String t) &#123;
+                System.out.println(t);
+                return t; 
+    &#125;
+ &#125;
+</code></pre>
+<pre><code class="java">//测试
+MyInterfaceImpl myInterfaceImpl=new MyInterfaceImpl();
+myInterfaceImpl.server(&quot;xxx&quot;);
+//xxx
+</code></pre>
+<pre><code class="java">/**
+ * 实现接口时不确定泛型类
+ */
+public class MyInterfaceImpl2&lt;T&gt; implements MyInterface&lt;T&gt;&#123;
+    @Override
+    public T server(T t) &#123;
+        System.out.println(t);
+        return t;
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">//测试
+MyInterfaceImpl2&lt;Integer&gt; myInterfaceImpl2=new MyInterfaceImpl2&lt;Integer&gt;();
+myInterfaceImpl2.server(2000);
+//2000
+</code></pre>
+<p>泛型方法</p>
+<pre><code class="java">/**
+ * 泛型方法
+ * 语法：&lt;T&gt; 返回类型
+ */
+public class MyGenericMethod &#123;
+    public &lt;T&gt; void show(T t) &#123;
+        System.out.println(&quot;泛型方法&quot;+t);
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">//测试
+MyGenericMethod myGenericMethod=new MyGenericMethod();
+myGenericMethod.show(&quot;tang&quot;);
+myGenericMethod.show(200);
+myGenericMethod.show(3.14);
+</code></pre>
+<h5 id="泛型集合"><a href="#泛型集合" class="headerlink" title="泛型集合"></a><strong>泛型集合</strong></h5><ul>
+<li><p><strong>概念</strong>：参数化类型、类型安全的集合，强制集合元素的类型必须一致。</p>
+</li>
+<li><p>特点</p>
+<p>：</p>
+<ul>
+<li>编译时即可检查，而非运行时抛出异常。</li>
+<li>访问时，不必类型转换（拆箱）。</li>
+<li>不同泛型指尖引用不能相互赋值，泛型不存在多态。</li>
+</ul>
+</li>
+</ul>
+<p>之前我们在创建LinkedList类型对象的时候并没有使用泛型，但是进到它的源码中会发现：</p>
+<pre><code class="java">public class LinkedList&lt;E&gt;
+    extends AbstractSequentialList&lt;E&gt;
+    implements List&lt;E&gt;, Deque&lt;E&gt;, Cloneable, java.io.Serializable&#123;//略&#125;
+</code></pre>
+<p>它是一个泛型类，而我之前使用的时候并没有传递，说明java语法是允许的，这个时候传递的类型是Object类，虽然它是所有类的父类，可以存储任意的类型，但是在遍历、获取元素时需要原来的类型就要进行强制转换。这个时候就会出现一些问题，假如往链表里存储了许多不同类型的数据，在强转的时候就要判断每一个原来的类型，这样就很容易出现错误。</p>
+<hr>
+<h2 id="Set集合概述"><a href="#Set集合概述" class="headerlink" title="Set集合概述"></a>Set集合概述</h2><h3 id="Set子接口"><a href="#Set子接口" class="headerlink" title="Set子接口"></a>Set子接口</h3><ul>
+<li><p>特点：无序、无下标、元素不可重复。</p>
+</li>
+<li><p>方法：全部继承自Collection中的方法。</p>
+<pre><code class="java">/**
+ * 测试Set接口的使用
+ * 特点：1.无序，没有下标；2.重复
+ * 1.添加数据
+ * 2.删除数据
+ * 3.遍历【重点】
+ * 4.判断
+ */
+public class Demo1 &#123;
+    public static void main(String[] args) &#123;
+        Set&lt;String&gt; set=new HashSet&lt;String&gt;();
+        //1.添加数据
+        set.add(&quot;tang&quot;);
+        set.add(&quot;he&quot;);
+        set.add(&quot;yu&quot;);
+        System.out.println(&quot;数据个数：&quot;+set.size());
+        System.out.println(set.toString());//无序输出
+        //2.删除数据
+        /*
+         * set.remove(&quot;tang&quot;); System.out.println(set.toString());
+         */
+        //3.遍历【重点】
+        //3.1 使用增强for
+        for (String string : set) &#123;
+            System.out.println(string);
+        &#125;
+        //3.2 使用迭代器
+        Iterator&lt;String&gt; iterator=set.iterator();
+        while (iterator.hasNext()) &#123;
+            System.out.println(iterator.next());
+        &#125;
+        //4.判断
+        System.out.println(set.contains(&quot;tang&quot;));
+        System.out.println(set.isEmpty());
+    &#125;
+&#125;
+</code></pre>
+</li>
+</ul>
+<h2 id="Set实现类"><a href="#Set实现类" class="headerlink" title="Set实现类"></a>Set实现类</h2><h3 id="HashSet【重点】"><a href="#HashSet【重点】" class="headerlink" title="HashSet【重点】"></a>HashSet【重点】</h3><ul>
+<li>基于HashCode计算元素存放位置。</li>
+<li>当存入元素的哈希码相同时，会调用equals进行确认，如结果为true，则拒绝后者存入。</li>
+</ul>
+<pre><code class="java">/**
+ * 人类
+ */
+public class Person &#123;
+    private String name;
+    private int age;
+    public Person(String name,int age) &#123;
+        this.name = name;
+        this.age = age;
+    &#125;
+    public String getName() &#123;
+        return name;
+    &#125;
+    public void setName(String name) &#123;
+        this.name = name;
+    &#125;
+    public int getAge() &#123;
+        return age;
+    &#125;
+    public void setAge(int age) &#123;
+        this.age = age;
+    &#125;
+    @Override
+    public String toString() &#123;
+        return &quot;Peerson [name=&quot; + name + &quot;, age=&quot; + age + &quot;]&quot;;
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">/**
+ * HashSet集合的使用
+ * 存储结构：哈希表（数组+链表+红黑树）
+ * 1.添加元素
+ * 2.删除元素
+ * 3.遍历
+ * 4.判断
+*/
+public class Demo3 &#123;
+    public static void main(String[] args) &#123;
+        HashSet&lt;Person&gt; hashSet=new HashSet&lt;&gt;();
+        Person p1=new Person(&quot;陈冠希&quot;,21);
+        Person p2=new Person(&quot;刘德华&quot;, 22);
+        Person p3=new Person(&quot;吴彦祖&quot;, 21);
+        //1.添加元素
+        hashSet.add(p1);
+        hashSet.add(p2);
+        hashSet.add(p3);
+        //重复，添加失败
+        hashSet.add(p3);
+        //直接new一个相同属性的对象，依然会被添加，不难理解。
+        //假如相同属性便认为是同一个对象，怎么修改？
+        hashSet.add(new Person(&quot;吴彦祖&quot;, 21));
+        System.out.println(hashSet.toString());
+        //2.删除元素
+        hashSet.remove(p2);
+        //3.遍历
+        //3.1 增强for
+        for (Person person : hashSet) &#123;
+            System.out.println(person);
+        &#125;
+        //3.2 迭代器
+        Iterator&lt;Person&gt; iterator=hashSet.iterator();
+        while (iterator.hasNext()) &#123;
+            System.out.println(iterator.next());        
+        &#125;
+        //4.判断
+        System.out.println(hashSet.isEmpty());
+        //直接new一个相同属性的对象结果输出是false，不难理解。
+        //注：假如相同属性便认为是同一个对象，该怎么做？
+        System.out.println(hashSet.contains(new Person(&quot;吴彦祖&quot;, 21)));
+    &#125;
+&#125;
+</code></pre>
+<p><strong>注</strong>：hashSet存储过程：</p>
+<ol>
+<li>根据hashCode计算保存的位置，如果位置为空，则直接保存，否则执行第二步。</li>
+<li>执行equals方法，如果方法返回true，则认为是重复，拒绝存储，否则形成链表。</li>
+</ol>
+<p>存储过程实际上就是重复依据，要实现“注”里的问题，可以重写hashCode和equals代码：</p>
+<pre><code class="java">@Override
+public int hashCode() &#123;
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + age;
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
+    return result;
+&#125;
+@Override
+public boolean equals(Object obj) &#123;
+    if (this == obj)
+        return true;
+    if (obj == null)
+        return false;
+    if (getClass() != obj.getClass())
+        return false;
+    Person other = (Person) obj;
+    if (age != other.age)
+        return false;
+    if (name == null) &#123;
+        if (other.name != null)
+            return false;
+    &#125; else if (!name.equals(other.name))
+        return false;
+    return true;
+&#125;
+</code></pre>
+<p>hashCode方法里为什么要使用31这个数字大概有两个原因：</p>
+<ol>
+<li><p>31是一个质数，这样的数字在计算时可以尽量减少散列冲突。</p>
+</li>
+<li><p>可以提高执行效率，因为31*i=(i&lt;&lt;5)-i，31乘以一个数可以转换成移位操作，这样能快一点；但是也有网上一些人对这两点提出质疑。</p>
+<h1 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h1><ul>
+<li>基于排序顺序实现不重复。</li>
+<li>实现了SortedSet接口，对集合元素自动排序。</li>
+<li>元素对象的类型必须实现Comparable接口，指定排序规则。</li>
+<li>通过CompareTo方法确定是否为重复元素。</li>
+</ul>
+</li>
+</ol>
+<pre><code class="java">/**
+ * 使用TreeSet保存数据
+ * 存储结构：红黑树
+ * 要求：元素类必须实现Comparable接口，compareTo方法返回0，认为是重复元素 
+ */
+public class Demo4 &#123;
+    public static void main(String[] args) &#123;
+        TreeSet&lt;Person&gt; persons=new TreeSet&lt;Person&gt;();
+        Person p1=new Person(&quot;tang&quot;,21);
+        Person p2=new Person(&quot;he&quot;, 22);
+        Person p3=new Person(&quot;yu&quot;, 21);
+        //1.添加元素
+        persons.add(p1);
+        persons.add(p2);
+        persons.add(p3);
+        //注：直接添加会报类型转换错误，需要实现Comparable接口
+        System.out.println(persons.toString());
+        //2.删除元素
+        persons.remove(p1);
+        persons.remove(new Person(&quot;he&quot;, 22));
+        System.out.println(persons.toString());
+        //3.遍历（略）
+        //4.判断
+        System.out.println(persons.contains(new Person(&quot;yu&quot;, 21)));
+    &#125;
+&#125;
+</code></pre>
+<p>查看Comparable接口的源码，发现只有一个compareTo抽象方法，在人类中实现它：</p>
+<pre><code class="java">public class Person implements Comparable&lt;Person&gt;&#123;
+    @Override
+    //1.先按姓名比
+    //2.再按年龄比
+    public int compareTo(Person o) &#123;
+        int n1=this.getName().compareTo(o.getName());
+        int n2=this.age-o.getAge();
+        return n1==0?n2:n1;
+    &#125;
+&#125;
+</code></pre>
+<p>除了实现Comparable接口里的比较方法，TreeSet也提供了一个带比较器Comparator的构造方法，使用匿名内部类来实现它：</p>
+<pre><code class="java">/**
+ * TreeSet的使用
+ * Comparator：实现定制比较（比较器）
+ */
+public class Demo5 &#123;
+    public static void main(String[] args) &#123;
+        TreeSet&lt;Person&gt; persons=new TreeSet&lt;Person&gt;(new Comparator&lt;Person&gt;() &#123;
+            @Override
+            public int compare(Person o1, Person o2) &#123;
+                // 先按年龄比较
+                // 再按姓名比较
+                int n1=o1.getAge()-o2.getAge();
+                int n2=o1.getName().compareTo(o2.getName());
+                return n1==0?n2:n1;
+            &#125;            
+        &#125;);
+        Person p1=new Person(&quot;陈冠希&quot;,21);
+        Person p2=new Person(&quot;吴彦祖&quot;, 22);
+        Person p3=new Person(&quot;彭于晏&quot;, 21);
+        persons.add(p1);
+        persons.add(p2);
+        persons.add(p3);
+        System.out.println(persons.toString());
+    &#125;
+&#125;
+</code></pre>
+<p>接下来我们来做一个小案例：</p>
+<pre><code class="java">/**
+ * 要求：使用TreeSet集合实现字符串按照长度进行排序
+ * helloworld tangrui hechengyang wangzixu yuguoming
+ * Comparator接口实现定制比较
+ */
+public class Demo6 &#123;
+    public static void main(String[] args) &#123;
+        TreeSet&lt;String&gt; treeSet=new TreeSet&lt;String&gt;(new Comparator&lt;String&gt;() &#123;
+            @Override
+            //先比较字符串长度
+            //再比较字符串
+            public int compare(String o1, String o2) &#123;
+                int n1=o1.length()-o2.length();
+                int n2=o1.compareTo(o2);
+                return n1==0?n2:n1;
+            &#125;            
+        &#125;);
+        treeSet.add(&quot;hello&quot;);
+        treeSet.add(&quot;chen&quot;);
+        treeSet.add(&quot;liu&quot;);
+        treeSet.add(&quot;peng&quot;);
+        treeSet.add(&quot;liang&quot;);
+        System.out.println(treeSet.toString());
+        //输出[liu, chen, peng, hello, liang]
+    &#125;
+&#125;
+</code></pre>
+<hr>
+<h2 id="Map集合的实现类"><a href="#Map集合的实现类" class="headerlink" title="Map集合的实现类"></a>Map集合的实现类</h2><h2 id="HashMap-【重点】"><a href="#HashMap-【重点】" class="headerlink" title="HashMap 【重点】"></a>HashMap 【重点】</h2><ul>
+<li>JDK1.2版本，线程不安全，运行效率快；允许用null作为key或是value。</li>
+</ul>
+<pre><code class="java">/**
+   * 学生类
+   */
+  public class Student &#123;
+      private String name;
+      private int id;    
+      public Student(String name, int id) &#123;
+          super();
+          this.name = name;
+          this.id = id;
+      &#125;
+      public String getName() &#123;
+          return name;
+      &#125;
+      public void setName(String name) &#123;
+          this.name = name;
+      &#125;
+      public int getId() &#123;
+          return id;
+      &#125;
+      public void setId(int id) &#123;
+          this.id = id;
+      &#125;
+      @Override
+      public String toString() &#123;
+          return &quot;Student [name=&quot; + name + &quot;, age=&quot; + id + &quot;]&quot;;
+      &#125;
+  &#125;
+</code></pre>
+<pre><code class="java">/**
+   * HashMap的使用
+   * 存储结构：哈希表（数组+链表+红黑树）
+   */
+  public class Demo2 &#123;
+      public static void main(String[] args) &#123;
+          HashMap&lt;Student, String&gt; hashMap=new HashMap&lt;Student, String&gt;();
+          Student s1=new Student(&quot;tang&quot;, 36);
+          Student s2=new Student(&quot;yu&quot;, 101);
+          Student s3=new Student(&quot;he&quot;, 10);
+          //1.添加元素
+          hashMap.put(s1, &quot;成都&quot;);
+          hashMap.put(s2, &quot;杭州&quot;);
+          hashMap.put(s3, &quot;郑州&quot;);
+          //添加失败，但会更新值
+          hashMap.put(s3,&quot;上海&quot;);
+          //添加成功，不过两个属性一模一样；
+          //注：假如相同属性便认为是同一个对象，怎么修改？
+          hashMap.put(new Student(&quot;he&quot;, 10),&quot;上海&quot;);
+          System.out.println(hashMap.toString());
+          //2.删除元素
+          hashMap.remove(s3);
+          System.out.println(hashMap.toString());
+          //3.遍历
+          //3.1 使用keySet()遍历
+          for (Student key : hashMap.keySet()) &#123;
+              System.out.println(key+&quot; &quot;+hashMap.get(key));
+          &#125;
+          //3.2 使用entrySet()遍历
+          for (Entry&lt;Student, String&gt; entry : hashMap.entrySet()) &#123;
+              System.out.println(entry.getKey()+&quot; &quot;+entry.getValue());
+          &#125;
+          //4.判断
+          //注：同上
+          System.out.println(hashMap.containsKey(new Student(&quot;he&quot;, 10)));
+          System.out.println(hashMap.containsValue(&quot;成都&quot;));
+      &#125;
+  &#125;
+</code></pre>
+<p>注：和之前说过的HashSet类似，重复依据是hashCode和equals方法，重写即可：</p>
+<pre><code class="java">@Override
+  public int hashCode() &#123;
+      final int prime = 31;
+      int result = 1;
+      result = prime * result + id;
+      result = prime * result + ((name == null) ? 0 : name.hashCode());
+      return result;
+  &#125;
+  @Override
+  public boolean equals(Object obj) &#123;
+      if (this == obj)
+          return true;
+      if (obj == null)
+          return false;
+      if (getClass() != obj.getClass())
+          return false;
+      Student other = (Student) obj;
+      if (id != other.id)
+          return false;
+      if (name == null) &#123;
+          if (other.name != null)
+              return false;
+      &#125; else if (!name.equals(other.name))
+          return false;
+      return true;
+  &#125;
+</code></pre>
+<h2 id="HashMap-源码分析"><a href="#HashMap-源码分析" class="headerlink" title="HashMap 源码分析"></a>HashMap 源码分析</h2><ul>
+<li>默认初始化容量：<code>static final int DEFAULT_INITIAL_CAPACITY = 1 &lt;&lt; 4; // aka 16</code></li>
+</ul>
+<ul>
+<li>数组最大容量：<code>static final int MAXIMUM_CAPACITY = 1 &lt;&lt; 30;</code></li>
+</ul>
+<ul>
+<li><p>默认加载因子：<code>static final float DEFAULT_LOAD_FACTOR = 0.75f;</code></p>
+</li>
+<li><p>链表调整为红黑树的链表长度阈值（JDK1.8）：<code>static final int TREEIFY_THRESHOLD = 8;</code></p>
+</li>
+<li><p>红黑树调整为链表的链表长度阈值（JDK1.8）：<code>static final int UNTREEIFY_THRESHOLD = 6;</code></p>
+</li>
+<li><p>链表调整为红黑树的数组最小阈值（JDK1.8）：<code>static final int MIN_TREEIFY_CAPACITY = 64;</code></p>
+</li>
+<li><p>HashMap存储的数组：<code>transient Node&lt;K,V&gt;[] table;</code></p>
+</li>
+<li><p>HashMap存储的元素个数：<code>transient int size;</code></p>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>默认加载因子是什么？<ul>
+<li>就是判断数组是否扩容的一个因子。假如数组容量为100，如果HashMap的存储元素个数超过了100*0.75=75，那么就会进行扩容。</li>
+</ul>
+</li>
+<li>链表调整为红黑树的链表长度阈值是什么？<ul>
+<li>假设在数组中下标为3的位置已经存储了数据，当新增数据时通过哈希码得到的存储位置又是3，那么就会在该位置形成一个链表，当链表过长时就会转换成红黑树以提高执行效率，这个阈值就是链表转换成红黑树的最短链表长度；</li>
+</ul>
+</li>
+<li>红黑树调整为链表的链表长度阈值是什么？<ul>
+<li>当红黑树的元素个数小于该阈值时就会转换成链表。</li>
+</ul>
+</li>
+<li>链表调整为红黑树的数组最小阈值是什么？<ul>
+<li>并不是只要链表长度大于8就可以转换成红黑树，在前者条件成立的情况下，数组的容量必须大于等于64才会进行转换。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>HashMap的数组table存储的就是一个个的Node&lt;K,V&gt;类型，很清晰地看到有一对键值，还有一个指向next的指针（以下只截取了部分源码）：</p>
+<pre><code class="java">static class Node&lt;K,V&gt; implements Map.Entry&lt;K,V&gt; &#123;
+      final K key;
+      V value;
+      Node&lt;K,V&gt; next;
+  &#125;
+</code></pre>
+<p>之前的代码中在new对象时调用的是HashMap的无参构造方法，进入到该构造方法的源码查看一下：</p>
+<pre><code class="java">public HashMap() &#123;
+      this.loadFactor = DEFAULT_LOAD_FACTOR; // all other fields defaulted
+  &#125;
+</code></pre>
+<p>发现没什么内容，只是赋值了一个默认加载因子；而在上文我们观察到源码中table和size都没有赋予初始值，说明刚创建的HashMap对象没有分配容量，并不拥有默认的16个空间大小，这样做的目的是为了节约空间，此时table为null，size为0。</p>
+<p>当我们往对象里添加元素时调用put方法：</p>
+<pre><code class="java">public V put(K key, V value) &#123;
+      return putVal(hash(key), key, value, false, true);
+  &#125;
+</code></pre>
+<p>put方法把key和value传给了putVal，同时还传入了一个hash(Key)所返回的值，这是一个产生哈希值的方法，再进入到putVal方法（部分源码）：</p>
+<pre><code class="java">final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
+                    boolean evict) &#123;
+      Node&lt;K,V&gt;[] tab; Node&lt;K,V&gt; p; int n, i;
+      if ((tab = table) == null || (n = tab.length) == 0)
+          n = (tab = resize()).length;
+      if ((p = tab[i = (n - 1) &amp; hash]) == null)
+          tab[i] = newNode(hash, key, value, null);
+      else&#123;
+          //略
+      &#125;
+  &#125;
+</code></pre>
+<p>这里面创建了一个tab数组和一个Node变量p，第一个if实际是判断table是否为空，而我们现在只关注刚创建HashMap对象时的状态，此时tab和table都为空，满足条件，执行内部代码，这条代码其实就是把resize()所返回的结果赋给tab，n就是tab的长度，resize顾名思义就是重新调整大小。查看resize()源码（部分）：</p>
+<pre><code class="java">final Node&lt;K,V&gt;[] resize() &#123;
+      Node&lt;K,V&gt;[] oldTab = table;
+      int oldCap = (oldTab == null) ? 0 : oldTab.length;
+      int oldThr = threshold;
+      if (oldCap &gt; 0);
+      else if (oldThr &gt; 0);
+      else &#123;               // zero initial threshold signifies using defaults
+          newCap = DEFAULT_INITIAL_CAPACITY;
+          newThr = (int)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
+      &#125; 
+      @SuppressWarnings(&#123;&quot;rawtypes&quot;,&quot;unchecked&quot;&#125;)
+      Node&lt;K,V&gt;[] newTab = (Node&lt;K,V&gt;[])new Node[newCap];
+      table = newTab;
+      return newTab;
+  &#125;
+</code></pre>
 
             </div>
 
