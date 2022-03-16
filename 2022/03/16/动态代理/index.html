@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=auto>
+<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
@@ -22,7 +22,7 @@
 <meta property="og:url" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/03/16/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/index.html">
 <meta property="og:site_name" content="EvanYoung">
 <meta property="og:description" content="动态代理（理解）： 基于反射机制。1.什么是动态代理 ？123使用jdk的反射机制，创建对象的能力， 创建的是代理类的对象。 而不用你创建类文件。不用写java文件。动态：在程序执行时，调用jdk提供的方法才能创建代理类的对象。   jdk动态代理，必须有接口，目标类必须实现接口， 没有接口时，需要使用cglib动态代理 2.知道动态代理能做什么 ？123456可以在不改变原来目标方法功能的前提">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E6%A1%86%E6%9E%B6/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.PNG">
 <meta property="article:published_time" content="2022-03-16T01:19:23.000Z">
 <meta property="article:modified_time" content="2022-03-16T02:40:03.350Z">
@@ -100,7 +100,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/evanyoungblog.gitee.io/">
                 <i class="iconfont icon-home-fill"></i>
-                Home
+                首页
               </a>
             </li>
           
@@ -112,7 +112,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/evanyoungblog.gitee.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                Archives
+                归档
               </a>
             </li>
           
@@ -124,7 +124,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/evanyoungblog.gitee.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                Categories
+                分类
               </a>
             </li>
           
@@ -136,7 +136,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/evanyoungblog.gitee.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                Tags
+                标签
               </a>
             </li>
           
@@ -148,7 +148,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/evanyoungblog.gitee.io/about/">
                 <i class="iconfont icon-user-fill"></i>
-                About
+                关于
               </a>
             </li>
           
@@ -188,7 +188,7 @@
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
       <time datetime="2022-03-16 09:19" pubdate>
-        March 16, 2022 am
+        2022年3月16日 上午
       </time>
     </span>
   
@@ -388,13 +388,19 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/evanyoungblog.gitee.io/2022/03/16/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Java多线程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/evanyoungblog.gitee.io/2022/03/15/Web/">
-                        <span class="hidden-mobile">Web</span>
-                        <span class="visible-mobile">Next</span>
+                      <a href="/evanyoungblog.gitee.io/2022/03/15/JAVA%E9%9B%86%E5%90%88-0/">
+                        <span class="hidden-mobile">JAVA集合</span>
+                        <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -411,7 +417,7 @@
     
       <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
         <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -437,7 +443,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -446,7 +452,7 @@
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
           <label data-error="x" data-success="v"
-                 for="local-search-input">keyword</label>
+                 for="local-search-input">关键词</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>

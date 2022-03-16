@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=auto>
+<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
@@ -22,14 +22,14 @@
 <meta property="og:url" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/03/15/JAVA%E9%9B%86%E5%90%88-0/index.html">
 <meta property="og:site_name" content="EvanYoung">
 <meta property="og:description" content="Java集合 集合概述 概念：对象的容器，定义了多个对象进行操作的常用方法。可实现  数组的功能。  和数组的区别： 1.数组长度固定，集合长度不固定。   ​       2.数组可以存储基本类型和引用类型，集合只能存储引用类型。  Java引用包：java.util.*;   Collection体系集合  Collection父接口 特点：代表一组任意类型的对象，无序、无下标、不能重复。">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE1.PNG">
 <meta property="og:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE2.PNG">
 <meta property="og:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE3.PNG">
 <meta property="og:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE4.PNG">
 <meta property="og:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE5.PNG">
 <meta property="article:published_time" content="2022-03-15T02:22:20.000Z">
-<meta property="article:modified_time" content="2022-03-16T01:34:32.235Z">
+<meta property="article:modified_time" content="2022-03-16T03:51:31.993Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE1.PNG">
@@ -104,7 +104,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/evanyoungblog.gitee.io/">
                 <i class="iconfont icon-home-fill"></i>
-                Home
+                首页
               </a>
             </li>
           
@@ -116,7 +116,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/evanyoungblog.gitee.io/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                Archives
+                归档
               </a>
             </li>
           
@@ -128,7 +128,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/evanyoungblog.gitee.io/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                Categories
+                分类
               </a>
             </li>
           
@@ -140,7 +140,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/evanyoungblog.gitee.io/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                Tags
+                标签
               </a>
             </li>
           
@@ -152,7 +152,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/evanyoungblog.gitee.io/about/">
                 <i class="iconfont icon-user-fill"></i>
-                About
+                关于
               </a>
             </li>
           
@@ -192,7 +192,7 @@
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
       <time datetime="2022-03-15 10:22" pubdate>
-        March 15, 2022 am
+        2022年3月15日 上午
       </time>
     </span>
   
@@ -202,7 +202,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      25k 字
+      30k 字
     </span>
   
 
@@ -211,7 +211,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      207 分钟
+      247 分钟
     </span>
   
 
@@ -555,6 +555,66 @@
 <p>这里面创建了一个tab数组和一个Node变量p，第一个if实际是判断table是否为空，而我们现在只关注刚创建HashMap对象时的状态，此时tab和table都为空，满足条件，执行内部代码，这条代码其实就是把resize()所返回的结果赋给tab，n就是tab的长度，resize顾名思义就是重新调整大小。查看resize()源码（部分）：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">final</span> Node&lt;K,V&gt;[] resize() &#123;<br>      Node&lt;K,V&gt;[] oldTab = table;<br>      <span class="hljs-type">int</span> <span class="hljs-variable">oldCap</span> <span class="hljs-operator">=</span> (oldTab == <span class="hljs-literal">null</span>) ? <span class="hljs-number">0</span> : oldTab.length;<br>      <span class="hljs-type">int</span> <span class="hljs-variable">oldThr</span> <span class="hljs-operator">=</span> threshold;<br>      <span class="hljs-keyword">if</span> (oldCap &gt; <span class="hljs-number">0</span>);<br>      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (oldThr &gt; <span class="hljs-number">0</span>);<br>      <span class="hljs-keyword">else</span> &#123;               <span class="hljs-comment">// zero initial threshold signifies using defaults</span><br>          newCap = DEFAULT_INITIAL_CAPACITY;<br>          newThr = (<span class="hljs-type">int</span>)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);<br>      &#125; <br>      <span class="hljs-meta">@SuppressWarnings(&#123;&quot;rawtypes&quot;,&quot;unchecked&quot;&#125;)</span><br>      Node&lt;K,V&gt;[] newTab = (Node&lt;K,V&gt;[])<span class="hljs-keyword">new</span> <span class="hljs-title class_">Node</span>[newCap];<br>      table = newTab;<br>      <span class="hljs-keyword">return</span> newTab;<br>  &#125;<br></code></pre></td></tr></table></figure>
 
+<p>该方法首先把table及其长度赋值给oldTab和oldCap；threshold是阈值的意思，此时为0，所以前两个if先不管，最后else里newCap的值为默认初始化容量16；往下创建了一个newCap大小的数组并将其赋给了table，刚创建的HashMap对象就在这里获得了初始容量。然后我们再回到putVal方法，第二个if就是根据哈希码得到的tab中的一个位置是否为空，为空便直接添加元素，此时数组中无元素所以直接添加。至此HashMap对象就完成了第一个元素的添加。当添加的元素超过16*0.75=12时，就会进行扩容：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">final</span> V <span class="hljs-title function_">putVal</span><span class="hljs-params">(<span class="hljs-type">int</span> hash, K key, V value, <span class="hljs-type">boolean</span> onlyIfAbsent,<span class="hljs-type">boolean</span> evict)</span>&#123;<br>      <span class="hljs-keyword">if</span> (++size &gt; threshold)<br>          resize();<br>  &#125;<br></code></pre></td></tr></table></figure>
+
+<p>扩容的代码如下（部分）：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">final</span> Node&lt;K,V&gt;[] resize() &#123;<br>      <span class="hljs-type">int</span> <span class="hljs-variable">oldCap</span> <span class="hljs-operator">=</span> (oldTab == <span class="hljs-literal">null</span>) ? <span class="hljs-number">0</span> : oldTab.length;<br>      <span class="hljs-type">int</span> newCap;<br>      <span class="hljs-keyword">if</span> (oldCap &gt; <span class="hljs-number">0</span>) &#123;<br>          <span class="hljs-keyword">if</span> (oldCap &gt;= MAXIMUM_CAPACITY) &#123;<span class="hljs-comment">//略&#125;</span><br>          <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((newCap = oldCap &lt;&lt; <span class="hljs-number">1</span>) &lt; MAXIMUM_CAPACITY &amp;&amp;<br>                   oldCap &gt;= DEFAULT_INITIAL_CAPACITY)<br>      &#125;<br>  &#125;<br></code></pre></td></tr></table></figure>
+
+<p>核心部分是else if里的移位操作，<strong>也就是说每次扩容都是原来大小的两倍</strong>。</p>
+<ul>
+<li>注**：额外说明的一点是在JDK1.8以前链表是头插入，JDK1.8以后链表是尾插入。</li>
+</ul>
+<hr>
+<h4 id="HashSet源码分析"><a href="#HashSet源码分析" class="headerlink" title="HashSet源码分析"></a><strong>HashSet源码分析</strong></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">HashSet</span>&lt;E&gt;<br>      <span class="hljs-keyword">extends</span> <span class="hljs-title class_">AbstractSet</span>&lt;E&gt;<br>      <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Set</span>&lt;E&gt;, Cloneable, java.io.Serializable<br>  &#123;<br>      <span class="hljs-keyword">private</span> <span class="hljs-keyword">transient</span> HashMap&lt;E,Object&gt; map;<br>      <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">Object</span> <span class="hljs-variable">PRESENT</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Object</span>();<br>      <span class="hljs-keyword">public</span> <span class="hljs-title function_">HashSet</span><span class="hljs-params">()</span> &#123;<br>          map = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;&gt;();<br>      &#125;<br>  &#125;<br></code></pre></td></tr></table></figure>
+
+<p>HashSet的存储结构就是HashMap，那它的存储方式是怎样的呢？可以看一下add方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">add</span><span class="hljs-params">(E e)</span> &#123;<br>      <span class="hljs-keyword">return</span> map.put(e, PRESENT)==<span class="hljs-literal">null</span>;<br>  &#125;<br></code></pre></td></tr></table></figure>
+
+<p>很明了地发现它的add方法调用的就是map的put方法，把元素作为map的key传进去的。。</p>
+<h2 id="Hashtable"><a href="#Hashtable" class="headerlink" title="Hashtable"></a>Hashtable</h2><ul>
+<li><p>JDK1.0版本，线程安全，运行效率慢；不允许null作为key或是value。</p>
+</li>
+<li><p>初始容量11，加载因子0.75。</p>
+<p>这个集合在开发过程中已经不用了，稍微了解即可。</p>
+</li>
+</ul>
+<h3 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a><strong>Properties</strong></h3><ul>
+<li>Hashtable的子类，要求key和value都是String。通常用于配置文件的读取。</li>
+</ul>
+<p>它继承了Hashtable的方法，与流关系密切，此处不详解。</p>
+<h3 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h3><ul>
+<li>实现了SortedMap接口（是Map的子接口），可以对key自动排序。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * TreeMap的使用</span><br><span class="hljs-comment"> * 存储结构：红黑树</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Demo3</span> &#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		TreeMap&lt;Student, Integer&gt; treeMap=<span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeMap</span>&lt;Student, Integer&gt;();<br>		Student s1=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>(<span class="hljs-string">&quot;tang&quot;</span>, <span class="hljs-number">36</span>);<br>		Student s2=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>(<span class="hljs-string">&quot;yu&quot;</span>, <span class="hljs-number">101</span>);<br>		Student s3=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>(<span class="hljs-string">&quot;he&quot;</span>, <span class="hljs-number">10</span>);<br>		<span class="hljs-comment">//1.添加元素</span><br>		treeMap.put(s1, <span class="hljs-number">21</span>);<br>		treeMap.put(s2, <span class="hljs-number">22</span>);<br>		treeMap.put(s3, <span class="hljs-number">21</span>);<br>		<span class="hljs-comment">//不能直接打印，需要实现Comparable接口，因为红黑树需要比较大小</span><br>		System.out.println(treeMap.toString());<br>		<span class="hljs-comment">//2.删除元素</span><br>		treeMap.remove(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>(<span class="hljs-string">&quot;he&quot;</span>, <span class="hljs-number">10</span>));<br>		System.out.println(treeMap.toString());<br>		<span class="hljs-comment">//3.遍历</span><br>		<span class="hljs-comment">//3.1 使用keySet()</span><br>		<span class="hljs-keyword">for</span> (Student key : treeMap.keySet()) &#123;<br>			System.out.println(key+<span class="hljs-string">&quot; &quot;</span>+treeMap.get(key));<br>		&#125;<br>		<span class="hljs-comment">//3.2 使用entrySet()</span><br>		<span class="hljs-keyword">for</span> (Entry&lt;Student, Integer&gt; entry : treeMap.entrySet()) &#123;<br>			System.out.println(entry.getKey()+<span class="hljs-string">&quot; &quot;</span>+entry.getValue());<br>		&#125;<br>		<span class="hljs-comment">//4.判断</span><br>		System.out.println(treeMap.containsKey(s1));<br>		System.out.println(treeMap.isEmpty());		<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>在学生类中实现Comparable接口：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Comparable</span>&lt;Student&gt;&#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compareTo</span><span class="hljs-params">(Student o)</span> &#123;<br>        <span class="hljs-type">int</span> n1=<span class="hljs-built_in">this</span>.id-o.id;<br>        <span class="hljs-keyword">return</span> n1;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>除此之外还可以使用比较器来定制比较：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">TreeMap&lt;Student, Integer&gt; treeMap2=<span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeMap</span>&lt;Student, Integer&gt;(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>&lt;Student&gt;() &#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(Student o1, Student o2)</span> &#123;<br>        <span class="hljs-comment">// 略</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;			<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<h3 id="TreeSet源码"><a href="#TreeSet源码" class="headerlink" title="TreeSet源码"></a>TreeSet源码</h3><p>与HashSet类似</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TreeSet</span>&lt;E&gt; <span class="hljs-keyword">extends</span> <span class="hljs-title class_">AbstractSet</span>&lt;E&gt;<br>    <span class="hljs-keyword">implements</span> <span class="hljs-title class_">NavigableSet</span>&lt;E&gt;, Cloneable, java.io.Serializable<br>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">transient</span> NavigableMap&lt;E,Object&gt; m;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">Object</span> <span class="hljs-variable">PRESENT</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Object</span>();<br>    TreeSet(NavigableMap&lt;E,Object&gt; m) &#123;<br>        <span class="hljs-built_in">this</span>.m = m;<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">TreeSet</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-built_in">this</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeMap</span>&lt;E,Object&gt;());<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>TreeSet的存储结构实际上就是TreeMap，再来看其存储方式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">add</span><span class="hljs-params">(E e)</span> &#123;<br>    <span class="hljs-keyword">return</span> m.put(e, PRESENT)==<span class="hljs-literal">null</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>它的add方法调用的就是TreeMap的put方法，将元素作为key传入到存储结构中。</p>
+<hr>
+<h2 id="Collections工具类"><a href="#Collections工具类" class="headerlink" title="Collections工具类"></a><strong>Collections工具类</strong></h2><p><strong>概念</strong>：集合工具类，定义了除了存取以外的集合常用方法。</p>
+<p><strong>方法</strong>：</p>
+<ul>
+<li><code>public static void reverse(List&lt;?&gt; list)</code>//反转集合中元素的顺序</li>
+<li><code>public static void shuffle(List&lt;?&gt; list)</code>//随机重置集合元素的顺序</li>
+<li><code>public static void sort(List&lt;T&gt; list)</code>//升序排序（元素类型必须实现Comparable接口）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 演示Collections工具类的使用</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Demo4</span> &#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		List&lt;Integer&gt; list=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;Integer&gt;();<br>		list.add(<span class="hljs-number">20</span>);<br>		list.add(<span class="hljs-number">10</span>);<br>		list.add(<span class="hljs-number">30</span>);<br>		list.add(<span class="hljs-number">90</span>);<br>		list.add(<span class="hljs-number">70</span>);<br>		<br>		<span class="hljs-comment">//sort排序</span><br>		System.out.println(list.toString());<br>		Collections.sort(list);<br>		System.out.println(list.toString());<br>		System.out.println(<span class="hljs-string">&quot;---------&quot;</span>);<br>		<br>		<span class="hljs-comment">//binarySearch二分查找</span><br>		<span class="hljs-type">int</span> i=Collections.binarySearch(list, <span class="hljs-number">10</span>);<br>		System.out.println(i);<br>		<br>		<span class="hljs-comment">//copy复制</span><br>		List&lt;Integer&gt; list2=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;Integer&gt;();<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i1=<span class="hljs-number">0</span>;i1&lt;<span class="hljs-number">5</span>;++i1) &#123;<br>			list2.add(<span class="hljs-number">0</span>);<br>		&#125;<br>		<span class="hljs-comment">//该方法要求目标元素容量大于等于源目标</span><br>		Collections.copy(list2, list);<br>		System.out.println(list2.toString());<br>		<br>		<span class="hljs-comment">//reserve反转</span><br>		Collections.reverse(list2);<br>		System.out.println(list2.toString());<br>		<br>		<span class="hljs-comment">//shuffle 打乱</span><br>		Collections.shuffle(list2);<br>		System.out.println(list2.toString());<br>		<br>		<span class="hljs-comment">//补充：list转成数组</span><br>		Integer[] arr=list.toArray(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Integer</span>[<span class="hljs-number">0</span>]);<br>		System.out.println(arr.length);<br>		<span class="hljs-comment">//补充：数组转成集合 </span><br>		String[] nameStrings= &#123;<span class="hljs-string">&quot;tang&quot;</span>,<span class="hljs-string">&quot;he&quot;</span>,<span class="hljs-string">&quot;yu&quot;</span>&#125;;<br>		<span class="hljs-comment">//受限集合，不能添加和删除</span><br>		List&lt;String&gt; list3=Arrays.asList(nameStrings);<br>		System.out.println(list3);<br>		<br>		<span class="hljs-comment">//注：基本类型转成集合时需要修改为包装类</span><br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>本文已完结</p>
+<ul>
+<li>本文源于:<a target="_blank" rel="noopener" href="https://lazydog036.gitee.io/2020/10/29/JAVA%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">https://lazydog036.gitee.io/2020/10/29/JAVA%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/</a></li>
+</ul>
 
             </div>
             <hr>
@@ -582,15 +642,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/evanyoungblog.gitee.io/2022/03/15/Web/">
+                      <a href="/evanyoungblog.gitee.io/2022/03/16/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Web</span>
-                        <span class="visible-mobile">Previous</span>
+                        <span class="hidden-mobile">动态代理</span>
+                        <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/evanyoungblog.gitee.io/2022/03/15/Web/">
+                        <span class="hidden-mobile">Web</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
@@ -605,7 +671,7 @@
     
       <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
         <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -631,7 +697,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -640,7 +706,7 @@
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
           <label data-error="x" data-success="v"
-                 for="local-search-input">keyword</label>
+                 for="local-search-input">关键词</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
