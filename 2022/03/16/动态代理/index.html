@@ -183,8 +183,7 @@
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <hr>
-<h2 id="动态代理（理解）：-基于反射机制。"><a href="#动态代理（理解）：-基于反射机制。" class="headerlink" title="动态代理（理解）： 基于反射机制。"></a>动态代理（理解）： 基于反射机制。</h2><p><img src="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E6%A1%86%E6%9E%B6/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.jpg"></p>
-<h3 id="1-什么是动态代理-？"><a href="#1-什么是动态代理-？" class="headerlink" title="1.什么是动态代理 ？"></a>1.什么是动态代理 ？</h3><pre><code class="tex">    使用jdk的反射机制，创建对象的能力， 创建的是代理类的对象。 而不用你创建类文件。不用写java文件。
+<h2 id="动态代理（理解）：-基于反射机制。"><a href="#动态代理（理解）：-基于反射机制。" class="headerlink" title="动态代理（理解）： 基于反射机制。"></a>动态代理（理解）： 基于反射机制。</h2><h3 id="1-什么是动态代理-？"><a href="#1-什么是动态代理-？" class="headerlink" title="1.什么是动态代理 ？"></a>1.什么是动态代理 ？</h3><pre><code class="tex">    使用jdk的反射机制，创建对象的能力， 创建的是代理类的对象。 而不用你创建类文件。不用写java文件。
     动态：在程序执行时，调用jdk提供的方法才能创建代理类的对象。
     jdk动态代理，必须有接口，目标类必须实现接口， 没有接口时，需要使用cglib动态代理
 </code></pre>
@@ -195,6 +194,7 @@
 你发现这个功能，现在还缺点， 不能完全满足我项目的需要。 我需要在gn.print()执行后，需要自己在增加代码。
 用代理实现 gn.print（）调用时， 增加自己代码， 而不用去改原来的 GoNong文件。
 </code></pre>
+<p><img src="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E6%A1%86%E6%9E%B6/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.PNG"></p>
 <hr>
 <h4 id="1-代理"><a href="#1-代理" class="headerlink" title="1.代理"></a>1.代理</h4><p>  代购， 中介，换ip，商家等等</p>
 <p>  比如有一家美国的大学， 可以对全世界招生。 留学中介（代理）</p>
