@@ -23,15 +23,14 @@
 <meta property="og:site_name" content="EvanYoung">
 <meta property="og:description" content="Java多线程1 线程简介案例:英雄联盟，微信聊天。 多任务：边吃饭比那玩手机，边开车边打电话，但但闹同一瞬间依旧只做了一件事。 多线程：多条路解决阻塞问题。王者荣耀。 1.1 普通方法调用和多线程  进程：操作系统中运行的程序 线程：一个进程里面可以有多个线程，视频中，同时有声音，图像等  1.2 Process与Thread 说起线程，就不得不说下程序，程序时指令和数据的有序集合，其本身没有任">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/pic1.PNG">
-<meta property="og:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/pic2.PNG">
-<meta property="og:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/pic3.PNG">
-<meta property="og:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/pic4.PNG">
+<meta property="og:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/bg3.jpg">
 <meta property="article:published_time" content="2022-03-16T03:54:35.000Z">
-<meta property="article:modified_time" content="2022-03-16T07:26:42.133Z">
+<meta property="article:modified_time" content="2022-03-17T03:58:20.877Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="多线程">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/java%E5%A4%9A%E7%BA%BF%E7%A8%8B/pic1.PNG">
+<meta name="twitter:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/bg3.jpg">
   
   
   <title>Java多线程 - EvanYoung</title>
@@ -83,7 +82,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/evanyoungblog.gitee.io/">
-      <strong>Fluid</strong>
+      <strong>EvanYoung</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -175,7 +174,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/evanyoungblog.gitee.io/img/default.png') no-repeat center center;
+         style="background: url('/evanyoungblog.gitee.io/img/bg2.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -201,7 +200,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      11k 字
+      13k 字
     </span>
   
 
@@ -210,7 +209,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      93 分钟
+      107 分钟
     </span>
   
 
@@ -450,8 +449,66 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyThreadSafe</span> &#123;  <br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;  <br>        ArrayList&lt;String&gt; arrayList = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();  <br>           <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10000</span>; i++) &#123;  <br>                <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(()-&gt; &#123;  <br>                <span class="hljs-keyword">synchronized</span>(arrayList)&#123;  <br>                arrayList.add(Thread.currentThread().getName());  <br>                               &#125;  <br>                &#125;).start();  <br>           &#125;  <br>        <span class="hljs-keyword">try</span> &#123;  <br>            Thread.sleep(<span class="hljs-number">100</span>);  <br>        &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;  <br>            e.printStackTrace();  <br>        &#125;  <br>        System.out.println(arrayList.size());  <br>   &#125;  <br>&#125;<br><br></code></pre></td></tr></table></figure>
 
 <h3 id="10-3-同步方法"><a href="#10-3-同步方法" class="headerlink" title="10.3 同步方法"></a>10.3 同步方法</h3><ul>
-<li>由于我们可以通过private关键字来保证数据对象只能被方法访问，所以我们只需要针对方法提出一套机制，</li>
+<li><p>由于我们可以通过private关键字来保证数据对象只能被方法访问，所以我们只需要针对方法提出一套机制，这套机制就是<strong>synchronized</strong>关键字，它包括两种用法：synchronized方法和synchronized块。</p>
+<p><strong>同步方法：<code>public synchronized void method(int args)&#123;&#125;</code></strong></p>
+</li>
+<li><p>synchronized方法控制对”对象”的访问，每个对象对应一把锁，每个synchronized方法都必须获得调用该方法的对象的锁才能执行，否则线程会阻塞，方法一旦执行，就独占该锁，直到该方法返回才释放锁，后面被阻塞的线程才获得这个锁，继续执行</p>
+</li>
 </ul>
+<p><strong>缺陷：若将一个大的方法声明为synchronized将会影响效率</strong></p>
+<ul>
+<li>方法里面需要修改的内容才需要锁，锁太多会浪费资源。</li>
+</ul>
+<p> synchronized默认是锁this，同步方法锁不住的时候只能用同步块</p>
+<ul>
+<li><p>同步块:synchronized(Obj){}</p>
+</li>
+<li><p>Obj称之为同步监视器</p>
+<ul>
+<li>Obj可以是任何对象，但推荐使用共享资源作为同步监视器</li>
+<li>同步方法中无需指定同步监视器，因为同步方法的同步监视器就是this，就是这个对象本身，或者是class【反射】</li>
+</ul>
+</li>
+<li><p>同步监视器的执行过程</p>
+<ol>
+<li><p>第一个线程访问，锁定同步监视器，执行其中代码。</p>
+</li>
+<li><p>第二个线程访问，发现同步监视器被锁定，无法访问。</p>
+</li>
+<li><p>第一个线程访问完毕，解锁同步监视器。</p>
+</li>
+<li><p>第二个线程访问，发现同步监视器没有锁，然后锁定并访问</p>
+</li>
+</ol>
+</li>
+</ul>
+<p>锁要锁对，默认锁this，银行取钱，锁银行没有用，要锁银行卡。</p>
+<p>锁要锁增删改的对象，同步块放在run()方法中。</p>
+<p><strong>银行取钱问题</strong></p>
+<p>1.账户类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Account</span> &#123;  <br>     <span class="hljs-comment">/**余额*/</span>  <br>     <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> money;  <br>        <span class="hljs-comment">/**卡名*/</span>  <br>     <span class="hljs-keyword">private</span> String name;  <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>2.模拟银行取钱</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**  </span><br><span class="hljs-comment"> * 模拟银行取钱  </span><br><span class="hljs-comment"> */</span>  <br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Drawing</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Thread</span>&#123;  <br>     <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Account account;  <br>     <span class="hljs-comment">/**现有的钱*/</span>  <br>     <span class="hljs-keyword">private</span>  <span class="hljs-type">int</span> nowMoney;  <br>     <span class="hljs-comment">/**取出的钱*/</span>  <br>     <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> drawingMoney;  <br>     <span class="hljs-keyword">public</span> <span class="hljs-title function_">Drawing</span><span class="hljs-params">( Account account,  <span class="hljs-type">int</span> drawingMoney,String name)</span> &#123;  <br>         <span class="hljs-built_in">super</span>(name);  <br>         <span class="hljs-built_in">this</span>.account = account;  <br>         <span class="hljs-built_in">this</span>.drawingMoney = drawingMoney;  <br>        &#125;  <br>     <span class="hljs-meta">@Override</span>  <br>     <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> &#123;  <br>         <span class="hljs-keyword">synchronized</span> (account)&#123;  <br>         <span class="hljs-comment">//判断有没有钱  </span><br>         <span class="hljs-keyword">if</span>(account.getMoney()-drawingMoney&lt;<span class="hljs-number">0</span>)&#123;  <br>             out.println(<span class="hljs-string">&quot;你的账户没有那么多钱！&quot;</span>);  <br>             <span class="hljs-keyword">return</span>;  <br>         &#125;<span class="hljs-keyword">try</span> &#123;  <br>             sleep(<span class="hljs-number">100</span>);  <br>         &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;  <br>             e.printStackTrace();  <br>         &#125;  <br>         <span class="hljs-comment">//余额  </span><br>         account.setMoney( account.getMoney() - drawingMoney);  <br>         <span class="hljs-comment">//手中的钱  </span><br>         nowMoney=nowMoney+drawingMoney;  <br>         out.println(<span class="hljs-string">&quot;余额为：&quot;</span>+account.getMoney());  <br>         out.println(Thread.currentThread().getName()+<span class="hljs-string">&quot;手中的钱：&quot;</span>+nowMoney);  <br>        &#125;  <br>     &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyThreadSyn2</span> &#123;  <br> <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;  <br>     <span class="hljs-type">Account</span> <span class="hljs-variable">account</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Account</span>(<span class="hljs-number">100</span>, <span class="hljs-string">&quot;工商&quot;</span>);  <br>     <span class="hljs-type">Drawing</span> <span class="hljs-variable">me</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Drawing</span>(account, <span class="hljs-number">40</span>, <span class="hljs-string">&quot;me&quot;</span>);  <br>     <span class="hljs-type">Drawing</span> <span class="hljs-variable">girlFriend</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Drawing</span>(account, <span class="hljs-number">89</span>, <span class="hljs-string">&quot;girlFriend&quot;</span>);  <br>     me.start();  <br>     girlFriend.start();  <br>    &#125;  <br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             </div>
             <hr>
@@ -465,6 +522,15 @@
                     
                   </div>
                 
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/evanyoungblog.gitee.io/tags/Java/">Java</a>
+                    
+                      <a class="hover-with-bg" href="/evanyoungblog.gitee.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+                    
+                  </div>
                 
               </div>
               
