@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/03/16/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/03/15/JAVA%E9%9B%86%E5%90%88-0/</loc>
+    
+    <lastmod>2022-04-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/04/02/meta-%E6%A0%87%E7%AD%BEname-viewport%E8%AF%A6%E8%A7%A3/</loc>
+    
+    <lastmod>2022-04-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/03/25/WhiteJotter/</loc>
+    
+    <lastmod>2022-04-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/03/21/Mybatis%E7%AC%94%E8%AE%B0-1/</loc>
+    
+    <lastmod>2022-03-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/about/index.html</loc>
+    
+    <lastmod>2022-03-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/03/15/Web/</loc>
+    
+    <lastmod>2022-03-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/03/16/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/</loc>
+    
+    <lastmod>2022-03-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io</loc>
+    <lastmod>2022-04-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/tags/Java/</loc>
+    <lastmod>2022-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <lastmod>2022-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/tags/%E9%9B%86%E5%90%88/</loc>
+    <lastmod>2022-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/tags/Java%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2022-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/tags/mybatis/</loc>
+    <lastmod>2022-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/tags/Web/</loc>
+    <lastmod>2022-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/tags/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/</loc>
+    <lastmod>2022-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/categories/Java%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2022-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/categories/JAVA%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2022-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/categories/Web/</loc>
+    <lastmod>2022-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+</urlset>
