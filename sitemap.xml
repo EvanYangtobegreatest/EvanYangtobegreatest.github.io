@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/03/25/WhiteJotter/</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/03/15/JAVA%E9%9B%86%E5%90%88-0/</loc>
     
     <lastmod>2022-05-13</lastmod>
@@ -39,15 +48,6 @@
   
   <url>
     <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/04/02/meta-%E6%A0%87%E7%AD%BEname-viewport%E8%AF%A6%E8%A7%A3/</loc>
-    
-    <lastmod>2022-04-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/03/25/WhiteJotter/</loc>
     
     <lastmod>2022-04-06</lastmod>
     
@@ -135,6 +135,20 @@
   
   <url>
     <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/tags/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/</loc>
+    <lastmod>2022-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/tags/vue/</loc>
+    <lastmod>2022-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/tags/springboot/</loc>
     <lastmod>2022-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
