@@ -19,17 +19,17 @@
     <meta name="description" content="动态代理（理解）： 基于反射机制。1.什么是动态代理 ？123使用jdk的反射机制，创建对象的能力， 创建的是代理类的对象。 而不用你创建类文件。不用写java文件。动态：在程序执行时，调用jdk提供的方法才能创建代理类的对象。   jdk动态代理，必须有接口，目标类必须实现接口， 没有接口时，需要使用cglib动态代理 2.知道动态代理能做什么 ？123456可以在不改变原来目标方法功能的前提">
 <meta property="og:type" content="article">
 <meta property="og:title" content="动态代理">
-<meta property="og:url" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/03/16/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/index.html">
+<meta property="og:url" content="https://43.138.188.15/2022/03/16/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/index.html">
 <meta property="og:site_name" content="EvanYoung">
 <meta property="og:description" content="动态代理（理解）： 基于反射机制。1.什么是动态代理 ？123使用jdk的反射机制，创建对象的能力， 创建的是代理类的对象。 而不用你创建类文件。不用写java文件。动态：在程序执行时，调用jdk提供的方法才能创建代理类的对象。   jdk动态代理，必须有接口，目标类必须实现接口， 没有接口时，需要使用cglib动态代理 2.知道动态代理能做什么 ？123456可以在不改变原来目标方法功能的前提">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/bg4.jpg">
+<meta property="og:image" content="https://43.138.188.15/evanyoungblog.gitee.io/img/bg4.jpg">
 <meta property="article:published_time" content="2022-03-16T01:19:23.000Z">
 <meta property="article:modified_time" content="2022-05-23T06:49:36.619Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="动态代理">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/img/bg4.jpg">
+<meta name="twitter:image" content="https://43.138.188.15/evanyoungblog.gitee.io/img/bg4.jpg">
   
   
   
@@ -71,7 +71,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"wx_8adaccde41.gitee.io","root":"/evanyoungblog.gitee.io/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/evanyoungblog.gitee.io/local-search.xml"};
+    var CONFIG = {"hostname":"43.138.188.15","root":"/evanyoungblog.gitee.io/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/evanyoungblog.gitee.io/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -439,7 +439,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>动态代理</div>
-      <div>https://wx_8adaccde41.gitee.io/evanyoungblog.gitee.io/2022/03/16/动态代理/</div>
+      <div>https://43.138.188.15/2022/03/16/动态代理/</div>
     </div>
     <div class="license-meta">
       
