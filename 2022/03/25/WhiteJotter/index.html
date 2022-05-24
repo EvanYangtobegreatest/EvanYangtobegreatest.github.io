@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/evanyoungblog.gitee.io/img/favicon.png">
-  <link rel="icon" href="/evanyoungblog.gitee.io/img/logo.PNG">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/logo.PNG">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -23,14 +23,14 @@
 <meta property="og:site_name" content="EvanYoung">
 <meta property="og:description" content="引言在csdn上看到一个vue+springboot的项目实战教程很不错：https:&#x2F;&#x2F;learner.blog.csdn.net&#x2F;article&#x2F;details&#x2F;88925013， 跟着做一下，锻炼一下自己。本文旨在记录下开发过程中遇到的问题和解决方法。 1.如果前端打包之后dist文件夹下面的文件copy到后端static目录下 ，访问 http:&#x2F;&#x2F;localhost:8080&#x2F;index">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://43.138.188.15/evanyoungblog.gitee.io/img/bg7.jpg">
+<meta property="og:image" content="https://43.138.188.15/img/bg7.jpg">
 <meta property="article:published_time" content="2022-03-25T01:11:24.000Z">
 <meta property="article:modified_time" content="2022-05-23T06:49:28.776Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="vue">
 <meta property="article:tag" content="springboot">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://43.138.188.15/evanyoungblog.gitee.io/img/bg7.jpg">
+<meta name="twitter:image" content="https://43.138.188.15/img/bg7.jpg">
   
   
   
@@ -58,12 +58,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/evanyoungblog.gitee.io/css/main.css" />
+<link  rel="stylesheet" href="/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/evanyoungblog.gitee.io/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/evanyoungblog.gitee.io/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
@@ -72,15 +72,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"43.138.188.15","root":"/evanyoungblog.gitee.io/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/evanyoungblog.gitee.io/local-search.xml"};
+    var CONFIG = {"hostname":"43.138.188.15","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/evanyoungblog.gitee.io/js/utils.js" ></script>
-  <script  src="/evanyoungblog.gitee.io/js/color-schema.js" ></script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
 
   
 <meta name="generator" content="Hexo 5.4.1"></head>
@@ -95,7 +95,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/evanyoungblog.gitee.io/">
+    <a class="navbar-brand" href="/">
       <strong>EvanYoung</strong>
     </a>
 
@@ -114,7 +114,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/evanyoungblog.gitee.io/">
+              <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -126,7 +126,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/evanyoungblog.gitee.io/archives/">
+              <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 归档
               </a>
@@ -138,7 +138,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/evanyoungblog.gitee.io/categories/">
+              <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 分类
               </a>
@@ -150,7 +150,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/evanyoungblog.gitee.io/tags/">
+              <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 标签
               </a>
@@ -162,7 +162,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/evanyoungblog.gitee.io/about/">
+              <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -191,7 +191,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/evanyoungblog.gitee.io/img/bg2.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/bg2.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -312,7 +312,7 @@
     
       <span class="category-chain">
         
-  <a href="/evanyoungblog.gitee.io/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
+  <a href="/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
   
   
 
@@ -327,9 +327,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/evanyoungblog.gitee.io/tags/vue/">#vue</a>
+        <a href="/tags/vue/">#vue</a>
       
-        <a href="/evanyoungblog.gitee.io/tags/springboot/">#springboot</a>
+        <a href="/tags/springboot/">#springboot</a>
       
     </div>
   
@@ -384,7 +384,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/evanyoungblog.gitee.io/2022/04/02/meta-%E6%A0%87%E7%AD%BEname-viewport%E8%AF%A6%E8%A7%A3/" title="&lt;meta&gt;标签name=viewport详解">
+                      <a href="/2022/04/02/meta-%E6%A0%87%E7%AD%BEname-viewport%E8%AF%A6%E8%A7%A3/" title="&lt;meta&gt;标签name=viewport详解">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">&lt;meta&gt;标签name=viewport详解</span>
                         <span class="visible-mobile">上一篇</span>
@@ -394,7 +394,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/evanyoungblog.gitee.io/2022/03/21/Mybatis%E7%AC%94%E8%AE%B0-1/" title="Mybatis笔记">
+                      <a href="/2022/03/21/Mybatis%E7%AC%94%E8%AE%B0-1/" title="Mybatis笔记">
                         <span class="hidden-mobile">Mybatis笔记</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -531,8 +531,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/evanyoungblog.gitee.io/js/events.js" ></script>
-<script  src="/evanyoungblog.gitee.io/js/plugins.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -556,7 +556,7 @@
 
 
   
-    <script  src="/evanyoungblog.gitee.io/js/img-lazyload.js" ></script>
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -693,7 +693,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/evanyoungblog.gitee.io/js/local-search.js" ></script>
+  <script  src="/js/local-search.js" ></script>
 
 
 
@@ -701,7 +701,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/evanyoungblog.gitee.io/js/boot.js" ></script>
+<script  src="/js/boot.js" ></script>
 
 
   
