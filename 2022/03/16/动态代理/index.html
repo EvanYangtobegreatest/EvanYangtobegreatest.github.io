@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://43.138.188.15/img/bg4.jpg">
 <meta property="article:published_time" content="2022-03-16T01:19:23.000Z">
-<meta property="article:modified_time" content="2022-05-23T06:49:36.619Z">
+<meta property="article:modified_time" content="2022-05-30T08:52:58.173Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="动态代理">
 <meta name="twitter:card" content="summary_large_image">
@@ -276,7 +276,7 @@
 <h2 id="动态代理（理解）：-基于反射机制。"><a href="#动态代理（理解）：-基于反射机制。" class="headerlink" title="动态代理（理解）： 基于反射机制。"></a>动态代理（理解）： 基于反射机制。</h2><h3 id="1-什么是动态代理-？"><a href="#1-什么是动态代理-？" class="headerlink" title="1.什么是动态代理 ？"></a>1.什么是动态代理 ？</h3><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs tex">使用jdk的反射机制，创建对象的能力， 创建的是代理类的对象。 而不用你创建类文件。不用写java文件。<br>动态：在程序执行时，调用jdk提供的方法才能创建代理类的对象。<br>   jdk动态代理，必须有接口，目标类必须实现接口， 没有接口时，需要使用cglib动态代理<br></code></pre></td></tr></table></figure>
 <h3 id="2-知道动态代理能做什么-？"><a href="#2-知道动态代理能做什么-？" class="headerlink" title="2.知道动态代理能做什么 ？"></a>2.知道动态代理能做什么 ？</h3><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs tex">可以在不改变原来目标方法功能的前提下， 可以在代理中增强自己的功能代码。<br>在程序开发中的意思：<br>   比如：你所在的项目中，有一个功能是其他人（公司的其它部门，其它小组的人）写好的，你可以使用。<br>	GoNong.class ,  GoNong gn = new GoNong(), gn.print();<br>你发现这个功能，现在还缺点， 不能完全满足我项目的需要。 我需要在gn.print()执行后，需要自己在增加代码。<br>用代理实现 gn.print（）调用时， 增加自己代码， 而不用去改原来的 GoNong文件。<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/yangyewen/EvanYoungBlog.gitee.io/raw/master/img/java%E6%A1%86%E6%9E%B6/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.PNG" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/img/java%E6%A1%86%E6%9E%B6/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86.PNG" srcset="/img/loading.gif" lazyload></p>
 <hr>
 <h4 id="1-代理"><a href="#1-代理" class="headerlink" title="1.代理"></a>1.代理</h4><p>  代购， 中介，换ip，商家等等</p>
 <p>  比如有一家美国的大学， 可以对全世界招生。 留学中介（代理）</p>

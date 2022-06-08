@@ -23,13 +23,13 @@
 <meta property="og:site_name" content="EvanYoung">
 <meta property="og:description" content="elementUI 表格 如何合并相同数据的列？在编写表格table中，会出现合并数据相同的列这种需求，如图：  实现方法添加span-method 方法，elementUI提供了span-method方法 让我们可以动态合并表格，其中有四个参数，分别是row, column, rowIndex, columnIndex 12345678910&lt;!--   row:代表当前行的值column">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/yangyewen/EvanYoungBlog.gitee.io/raw/master/img/elementui-%E7%AC%94%E8%AE%B0/objectSpanMethod.PNG">
+<meta property="og:image" content="https://43.138.188.15/img/elementui-%E7%AC%94%E8%AE%B0/objectSpanMethod.PNG">
 <meta property="article:published_time" content="2022-05-13T08:42:19.000Z">
-<meta property="article:modified_time" content="2022-05-23T06:46:00.277Z">
+<meta property="article:modified_time" content="2022-05-30T08:53:28.061Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="elementUI">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gitee.com/yangyewen/EvanYoungBlog.gitee.io/raw/master/img/elementui-%E7%AC%94%E8%AE%B0/objectSpanMethod.PNG">
+<meta name="twitter:image" content="https://43.138.188.15/img/elementui-%E7%AC%94%E8%AE%B0/objectSpanMethod.PNG">
   
   
   
@@ -273,7 +273,7 @@
             <div class="markdown-body">
               
               <h2 id="elementUI-表格-如何合并相同数据的列？"><a href="#elementUI-表格-如何合并相同数据的列？" class="headerlink" title="elementUI 表格 如何合并相同数据的列？"></a>elementUI 表格 如何合并相同数据的列？</h2><p>在编写表格table中，会出现合并数据相同的列这种需求，如图：</p>
-<p><img src="https://gitee.com/yangyewen/EvanYoungBlog.gitee.io/raw/master/img/elementui-%E7%AC%94%E8%AE%B0/objectSpanMethod.PNG" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/img/elementui-%E7%AC%94%E8%AE%B0/objectSpanMethod.PNG" srcset="/img/loading.gif" lazyload></p>
 <h3 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h3><p>添加span-method 方法，elementUI提供了span-method方法 让我们可以动态合并表格，其中有四个参数，分别是row, column, rowIndex, columnIndex</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;!--   <br>row:代表当前行的值<br>column:代表当前列的值<br>rowIndex:当前行的索引<br>columnIndex:当前列的索引<br>--&gt;<br><br>&lt;el-table :data=&quot;tableData&quot; :span-method=&quot;objectSpanMethod&quot; &gt;<br><br>&lt;!--objectSpanMethod是定义的逻辑方法，可以根据自己需求定义--&gt;<br></code></pre></td></tr></table></figure>
 

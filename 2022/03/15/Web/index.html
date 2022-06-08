@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://43.138.188.15/img/bg5.jpg">
 <meta property="article:published_time" content="2022-03-15T02:22:20.000Z">
-<meta property="article:modified_time" content="2022-05-23T06:49:21.047Z">
+<meta property="article:modified_time" content="2022-05-30T09:03:39.435Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Web">
 <meta name="twitter:card" content="summary_large_image">
@@ -272,7 +272,7 @@
             
             <div class="markdown-body">
               
-              <h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="1-网络通讯部分"><a href="#1-网络通讯部分" class="headerlink" title="1.网络通讯部分"></a>1.网络通讯部分</h2><h3 id="1-1TCP与UDP区别？（了解）"><a href="#1-1TCP与UDP区别？（了解）" class="headerlink" title="1.1TCP与UDP区别？（了解）"></a>1.1TCP与UDP区别？（了解）</h3><p><img src="images/%E5%9B%BE%E7%89%8728.png" srcset="/img/loading.gif" lazyload alt="image text"></p>
+              <h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="1-网络通讯部分"><a href="#1-网络通讯部分" class="headerlink" title="1.网络通讯部分"></a>1.网络通讯部分</h2><h3 id="1-1TCP与UDP区别？（了解）"><a href="#1-1TCP与UDP区别？（了解）" class="headerlink" title="1.1TCP与UDP区别？（了解）"></a>1.1TCP与UDP区别？（了解）</h3><p><img src="/img/web/%E5%9B%BE%E7%89%8728.png" srcset="/img/loading.gif" lazyload></p>
 <pre><code class="hljs">TCP(Transmission Control Protocol 传输控制协议)是一种面向连接(连接导向)的、可靠的、基于IP的传输层协议。
 
 UDP是User Datagram Protocol的简称，中文名是用户数据报协议，是OSI参考模型中的传输层协议，它是一种无连接的传输层协议，提供面向事务的简单不可靠信息传送服务。
@@ -280,7 +280,7 @@ UDP是User Datagram Protocol的简称，中文名是用户数据报协议，是O
 TCP和UDP都是来自于传输层的协议。传输层位于应用层和网络层之间，负责位于不同主机进程之间的通信。
 </code></pre>
 <p>TCP与UDP的区别</p>
-<p><img src="images/%E5%9B%BE%E7%89%8729.png" srcset="/img/loading.gif" lazyload alt="Image text"></p>
+<p><img src="/img/web/%E5%9B%BE%E7%89%8729.png" srcset="/img/loading.gif" lazyload></p>
 <pre><code class="hljs">1.TCP基于连接UDP无连接
 2.TCP要求系统资源较多,UDP较少 
 3.TCP保证数据正确性，UDP可能丢包 
@@ -295,7 +295,7 @@ TCP和UDP都是来自于传输层的协议。传输层位于应用层和网络�
 <hr>
 <h3 id="1-3TCP的三次握手"><a href="#1-3TCP的三次握手" class="headerlink" title="1.3TCP的三次握手"></a>1.3TCP的三次握手</h3><pre><code class="hljs">为了准确无误地把数据送达目标处，TCP协议采用了三次握手策略。
 </code></pre>
-<p><img src="images/%E5%9B%BE%E7%89%8730.png" srcset="/img/loading.gif" lazyload alt="image text"></p>
+<p><img src="/img/web/%E5%9B%BE%E7%89%8730.png" srcset="/img/loading.gif" lazyload alt="image text"></p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs tex">为什么要三次握手？<br>三次握手的目的是建立可靠的通信信道，说到通讯，简单来说就是数据的发送与接收，而三次握手最主要的目的就是双方确认自己与对方的发送与接收是正常的。<br><br>SYN：同步序列编号（Synchronize Sequence Numbers）。是TCP/IP建立连接时使用的握手信号。<br>第一次握手：客户端给服务器发送一个SYN。客户端发送网络包，服务端收到了。服务器得出结论：客户端的发送能力，服务端的接收能力正常。<br>第二次握手：服务端收到SYN报文之后，会应答一个SYN+ACK报文。服务端发包，客户端收到了。<br>客户端得出结论：服务端的接收和发送能力，客户端的接收和发送能力正常。但是此时服务端不能确认客户端的接收能力是否正常。<br>第三次握手;客户端收到SYN+ACK报文之后，回应一个ACK报文。客户端发包，服务端收到了。服务器得出结论：客户端的接收和发送能力，自己的接收发送能力都正常。<br>通过三次握手，双方都确认对方的接收以及发送能力正常。<br></code></pre></td></tr></table></figure>
 
 <p>&nbsp;</p>
@@ -320,7 +320,7 @@ response.sendRedirect(&quot;other.jsp&quot;);
 <hr>
 <h3 id="1-5Get和Post的区别？"><a href="#1-5Get和Post的区别？" class="headerlink" title="1.5Get和Post的区别？"></a>1.5Get和Post的区别？</h3><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs tex">1. Get是不安全的，因为在传输过程，数据被放在请求的URL中；Post的所有操作对用户来说都是不可见的。  <br>2. Get传送的数据量较小，一般传输数据大小不超过2k-4k（根据浏览器不同，限制不一样，但相差不大这主要是因为受URL长度限制；Post传送的数据量较大，一般被默认为不受限制。   <br>3. Get限制Form表单的数据集的值必须为ASCII字符；而Post支持整个ISO10646字符集。        <br>4. Get执行效率却比Post方法好。Get是form提交的默认方法。<br></code></pre></td></tr></table></figure>
 
-<p>   <img src="images/20210325210742187.png" srcset="/img/loading.gif" lazyload alt="image text"></p>
+<p>   <img src="/img/web/20210325210742187.png" srcset="/img/loading.gif" lazyload alt="image text"></p>
 <p>&nbsp;</p>
 <hr>
 <h2 id="2-cookie和session的区别？（必会）"><a href="#2-cookie和session的区别？（必会）" class="headerlink" title="2.cookie和session的区别？（必会）"></a>2.cookie和session的区别？（必会）</h2><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs tex">1.存储位置不同cookie的数据信息存放在客户端浏览器上。 session的数据信息存放在服务器上。 <br>2.存储容量不同单个cookie保存的数据&lt;=4KB，一个站点最多保存20个Cookie。 对于session来说并没有上限，但出于对服务器端的性能考虑，session内不要存放过多的东西，并且设置session删除机制。<br>3.存储方式不同cookie中只能保管ASCII字符串，并需要通过编码方式存储为Unicode字符或者二进制数据。 session中能够存储任何类型的数据，包括且不限于string，integer，list，map等。<br>4.隐私策略不同cookie对客户端是可见的，别有用心的人可以分析存放在本地的cookie并进行cookie欺骗，所以它是不安全的。 session存储在服务器上，不存在敏感信息泄漏的风险。<br>5. 有效期上不同开发可以通过设置cookie的属性，达到使cookie长期有效的效果。 session依赖于名为JSESSIONID的cookie，而cookie JSESSIONID的过期时间默认为-1，只需关闭窗口该session就会失效，因而session不能达到长期有效的效果。<br>6.服务器压力不同cookie保管在客户端，不占用服务器资源。对于并发用户十分多的网站，cookie是很好的选择。 session是保管在服务器端的，每个用户都会产生一个session。假如并发访问的用户十分多，会产生十分多的session，耗费大量的内存。 <br></code></pre></td></tr></table></figure>
