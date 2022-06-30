@@ -24,7 +24,7 @@
 <meta property="og:description" content="redisTemplate操作redis1.String操作 123456789&#x2F;&#x2F;String传入redis redisTemplate.opsForValue().set(key, value);&#x2F;&#x2F;从redis获取 Object value &#x3D; redisTemplate.opsForValue().get(key);&#x2F;&#x2F;设置过期时间long time &#x3D;60;redisTemplate.o">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-30T08:47:59.000Z">
-<meta property="article:modified_time" content="2022-06-30T08:58:21.135Z">
+<meta property="article:modified_time" content="2022-06-30T09:11:56.041Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -269,7 +269,7 @@
             
             <div class="markdown-body">
               
-              <h2 id="redisTemplate操作redis"><a href="#redisTemplate操作redis" class="headerlink" title="redisTemplate操作redis"></a>redisTemplate操作redis</h2><p><strong>1.String操作</strong></p>
+              <h1 id="redisTemplate操作redis"><a href="#redisTemplate操作redis" class="headerlink" title="redisTemplate操作redis"></a>redisTemplate操作redis</h1><p><strong>1.String操作</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//String传入redis </span><br>redisTemplate.opsForValue().set(key, value);<br><br><span class="hljs-comment">//从redis获取 </span><br><span class="hljs-type">Object</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> redisTemplate.opsForValue().get(key);<br><br><span class="hljs-comment">//设置过期时间</span><br><span class="hljs-type">long</span> <span class="hljs-variable">time</span> <span class="hljs-operator">=</span><span class="hljs-number">60</span>;<br>redisTemplate.opsForValue().set(key, value, time, TimeUnit.SECONDS);<br></code></pre></td></tr></table></figure>
 
 <p><strong>2.key操作</strong></p>

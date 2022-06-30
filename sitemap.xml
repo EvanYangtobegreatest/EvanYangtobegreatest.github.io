@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://43.138.188.15/2022/06/30/springboot%E9%9B%86%E6%88%90redis/</loc>
+    <loc>https://43.138.188.15/2022/06/30/redisTemplate%E6%93%8D%E4%BD%9Credis/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://43.138.188.15/2022/06/30/redisTemplate%E6%93%8D%E4%BD%9Credis/</loc>
+    <loc>https://43.138.188.15/2022/06/30/springboot%E9%9B%86%E6%88%90redis/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
