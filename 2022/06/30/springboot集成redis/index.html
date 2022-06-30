@@ -24,7 +24,7 @@
 <meta property="og:description" content="springboot 集成redisredis是什么Redis 是一种非关系型数据库（NoSQL），NoSQL 是以 key-value 的形式存储的，和传统的关系型数据库不一样，不一定遵循传统数据库的一些基本要求，比如说 SQL 标准，ACID 属性，表结构等等，这类数据库主要有以下特点：非关系型的、分布式的、开源的、水平可扩展的。NoSQL 使用场景有：对数据高并发读写、对海量数据的高效率存储">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-30T06:20:32.000Z">
-<meta property="article:modified_time" content="2022-06-30T08:55:02.180Z">
+<meta property="article:modified_time" content="2022-06-30T09:08:20.346Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -216,7 +216,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.4k 字
+          2.9k 字
         
       </span>
     
@@ -227,7 +227,7 @@
         
         
         
-          20 分钟
+          25 分钟
         
       </span>
     
@@ -269,8 +269,8 @@
             
             <div class="markdown-body">
               
-              <h2 id="springboot-集成redis"><a href="#springboot-集成redis" class="headerlink" title="springboot 集成redis"></a>springboot 集成redis</h2><h4 id="redis是什么"><a href="#redis是什么" class="headerlink" title="redis是什么"></a>redis是什么</h4><p>Redis 是一种非关系型数据库（NoSQL），NoSQL 是以 key-value 的形式存储的，和传统的关系型数据库不一样，不一定遵循传统数据库的一些基本要求，比如说 SQL 标准，ACID 属性，表结构等等，这类数据库主要有以下特点：非关系型的、分布式的、开源的、水平可扩展的。NoSQL 使用场景有：对数据高并发读写、对海量数据的高效率存储和访问、对数据的高可扩展性和高可用性等等。</p>
-<h4 id="redis数据类型"><a href="#redis数据类型" class="headerlink" title="redis数据类型"></a>redis数据类型</h4><p><strong>String（字符串）</strong></p>
+              <h1 id="springboot-集成redis"><a href="#springboot-集成redis" class="headerlink" title="springboot 集成redis"></a>springboot 集成redis</h1><h2 id="redis是什么"><a href="#redis是什么" class="headerlink" title="redis是什么"></a>redis是什么</h2><p>Redis 是一种非关系型数据库（NoSQL），NoSQL 是以 key-value 的形式存储的，和传统的关系型数据库不一样，不一定遵循传统数据库的一些基本要求，比如说 SQL 标准，ACID 属性，表结构等等，这类数据库主要有以下特点：非关系型的、分布式的、开源的、水平可扩展的。NoSQL 使用场景有：对数据高并发读写、对海量数据的高效率存储和访问、对数据的高可扩展性和高可用性等等。</p>
+<h2 id="redis数据类型"><a href="#redis数据类型" class="headerlink" title="redis数据类型"></a>redis数据类型</h2><p><strong>String（字符串）</strong></p>
 <p>string 是 redis 最基本的类型，你可以理解成与 Memcached 一模一样的类型，一个 key 对应一个 value。</p>
 <p>string 类型是二进制安全的。意思是 redis 的 string 可以包含任何数据。比如jpg图片或者序列化的对象。</p>
 <p>string 类型是 Redis 最基本的数据类型，string 类型的值最大能存储 512MB。</p>
@@ -286,7 +286,7 @@
 <p>Redis  zset 和 set 一样也是string类型元素的集合,且不允许重复的成员。</p>
 <p>不同的是每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。</p>
 <p>zset的成员是唯一的,但分数(score)却可以重复。</p>
-<h3 id="Springboot如何集成使用redis"><a href="#Springboot如何集成使用redis" class="headerlink" title="Springboot如何集成使用redis"></a>Springboot如何集成使用redis</h3><p><strong>1.添加依赖</strong></p>
+<h2 id="Springboot如何集成使用redis"><a href="#Springboot如何集成使用redis" class="headerlink" title="Springboot如何集成使用redis"></a>Springboot如何集成使用redis</h2><p><strong>1.添加依赖</strong></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br> <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
 <p><strong>2.创建Redis的Config类</strong></p>
@@ -296,12 +296,38 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@SpringBootApplication()</span><br><span class="hljs-meta">@EnableCaching</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyspringbootApplication</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        SpringApplication.run(MyspringbootApplication.class, args);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>到这里就完成springboot集成redis了。</p>
-<h3 id="redis数据操作"><a href="#redis数据操作" class="headerlink" title="redis数据操作"></a>redis数据操作</h3>
+<h2 id="redis数据操作"><a href="#redis数据操作" class="headerlink" title="redis数据操作"></a>redis数据操作</h2><p><a target="_blank" rel="noopener" href="http://yangyewen.xyz/2022/06/30/redisTemplate%E6%93%8D%E4%BD%9Credis/">点击查看redis在springboot的操作</a></p>
+<h2 id="利用redis实现缓存功能"><a href="#利用redis实现缓存功能" class="headerlink" title="利用redis实现缓存功能"></a>利用redis实现缓存功能</h2><p>原理很简单，先在redis中查询是否有数据，若没有就去数据库查询。</p>
+<p>如果redis有，就返回redis中的数据。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"> <span class="hljs-meta">@Autowired</span><br>    RedisTemplate&lt;String,Object&gt; redisTemplate;<br><br><span class="hljs-meta">@ResponseBody</span><br>    <span class="hljs-meta">@RequestMapping(value = &quot;/api/user&quot;)</span> <span class="hljs-comment">//查询数据</span><br>    <span class="hljs-keyword">public</span> List&lt;User&gt; <span class="hljs-title function_">getuser</span><span class="hljs-params">()</span> &#123;<br>        List&lt;User&gt; user;<br>        <span class="hljs-comment">//先在redis中查找</span><br>        user=( List&lt;User&gt;)redisTemplate.opsForValue().get(<span class="hljs-string">&quot;user&quot;</span>);<br>        <span class="hljs-comment">//如果redis没有就查询数据库</span><br>         <span class="hljs-keyword">if</span>(user==<span class="hljs-literal">null</span>)&#123;<br>             user=userrService.queryuser();<br>         &#125;<br>        <span class="hljs-comment">//将查到的数据放入redis缓存中</span><br>        redisTemplate.opsForValue().set(<span class="hljs-string">&quot;user&quot;</span>, user);<br>        <span class="hljs-keyword">return</span> user;<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+
               
             </div>
             <hr/>
             <div>
               <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
   
   
 </div>
