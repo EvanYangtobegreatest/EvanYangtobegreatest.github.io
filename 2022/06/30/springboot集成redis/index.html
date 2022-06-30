@@ -16,21 +16,21 @@
   <meta name="author" content="Evan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="打印HTML页面时，表格table过长导致分页错行问题在打印一个html页面时，会出现table数据过长，需要分多个页面打印，这时候会出现一行切成两行，导致表格行错乱。 解决办法可以在媒体打印中添加下面几行代码 12345678910&lt;style&gt;@media print&amp;#123;  table &amp;#123; page-break-after:auto &amp;#125;  tr    &amp;">
+    <meta name="description" content="springboot 集成redisredis是什么Redis 是一种非关系型数据库（NoSQL），NoSQL 是以 key-value 的形式存储的，和传统的关系型数据库不一样，不一定遵循传统数据库的一些基本要求，比如说 SQL 标准，ACID 属性，表结构等等，这类数据库主要有以下特点：非关系型的、分布式的、开源的、水平可扩展的。NoSQL 使用场景有：对数据高并发读写、对海量数据的高效率存储">
 <meta property="og:type" content="article">
-<meta property="og:title" content="页面打印表格换页问题">
-<meta property="og:url" content="https://43.138.188.15/2022/05/18/%E9%A1%B5%E9%9D%A2%E6%89%93%E5%8D%B0%E8%A1%A8%E6%A0%BC%E6%8D%A2%E9%A1%B5%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="springboot集成redis">
+<meta property="og:url" content="https://43.138.188.15/2022/06/30/springboot%E9%9B%86%E6%88%90redis/index.html">
 <meta property="og:site_name" content="EvanYoung">
-<meta property="og:description" content="打印HTML页面时，表格table过长导致分页错行问题在打印一个html页面时，会出现table数据过长，需要分多个页面打印，这时候会出现一行切成两行，导致表格行错乱。 解决办法可以在媒体打印中添加下面几行代码 12345678910&lt;style&gt;@media print&amp;#123;  table &amp;#123; page-break-after:auto &amp;#125;  tr    &amp;">
+<meta property="og:description" content="springboot 集成redisredis是什么Redis 是一种非关系型数据库（NoSQL），NoSQL 是以 key-value 的形式存储的，和传统的关系型数据库不一样，不一定遵循传统数据库的一些基本要求，比如说 SQL 标准，ACID 属性，表结构等等，这类数据库主要有以下特点：非关系型的、分布式的、开源的、水平可扩展的。NoSQL 使用场景有：对数据高并发读写、对海量数据的高效率存储">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-18T07:55:29.000Z">
-<meta property="article:modified_time" content="2022-05-23T06:50:13.113Z">
+<meta property="article:published_time" content="2022-06-30T06:20:32.000Z">
+<meta property="article:modified_time" content="2022-06-30T08:55:02.180Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>页面打印表格换页问题 - EvanYoung</title>
+  <title>springboot集成redis - EvanYoung</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,7 +193,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="页面打印表格换页问题"></span>
+            <span id="subtitle" data-typed-text="springboot集成redis"></span>
           
         </div>
 
@@ -204,8 +204,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-05-18 15:55" pubdate>
-          2022年5月18日 下午
+        <time datetime="2022-06-30 14:20" pubdate>
+          2022年6月30日 下午
         </time>
       </span>
     
@@ -216,7 +216,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          461 字
+          2.4k 字
         
       </span>
     
@@ -227,7 +227,7 @@
         
         
         
-          4 分钟
+          20 分钟
         
       </span>
     
@@ -265,42 +265,43 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">页面打印表格换页问题</h1>
+            <h1 style="display: none">springboot集成redis</h1>
             
             <div class="markdown-body">
               
-              <h2 id="打印HTML页面时，表格table过长导致分页错行问题"><a href="#打印HTML页面时，表格table过长导致分页错行问题" class="headerlink" title="打印HTML页面时，表格table过长导致分页错行问题"></a>打印HTML页面时，表格table过长导致分页错行问题</h2><p>在打印一个html页面时，会出现table数据过长，需要分多个页面打印，这时候会出现一行切成两行，导致表格行错乱。</p>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>可以在媒体打印中添加下面几行代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css"></span><br><span class="language-css"><span class="hljs-keyword">@media</span> print</span><br><span class="language-css">&#123;</span><br><span class="language-css">  <span class="hljs-selector-tag">table</span> &#123; <span class="hljs-attribute">page-break-after</span>:auto &#125;</span><br><span class="language-css">  <span class="hljs-selector-tag">tr</span>    &#123; <span class="hljs-attribute">page-break-inside</span>:avoid; <span class="hljs-attribute">page-break-after</span>:auto &#125;</span><br><span class="language-css">  <span class="hljs-selector-tag">td</span>    &#123; <span class="hljs-attribute">page-break-inside</span>:avoid; <span class="hljs-attribute">page-break-after</span>:auto &#125;</span><br><span class="language-css">  <span class="hljs-selector-tag">thead</span> &#123; <span class="hljs-attribute">display</span>:table-header-group &#125;//表格的行头</span><br><span class="language-css">  <span class="hljs-selector-tag">tfoot</span> &#123; <span class="hljs-attribute">display</span>:table-footer-group &#125; //表格的行尾</span><br><span class="language-css">&#125;</span><br><span class="language-css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre></td></tr></table></figure>
+              <h2 id="springboot-集成redis"><a href="#springboot-集成redis" class="headerlink" title="springboot 集成redis"></a>springboot 集成redis</h2><h4 id="redis是什么"><a href="#redis是什么" class="headerlink" title="redis是什么"></a>redis是什么</h4><p>Redis 是一种非关系型数据库（NoSQL），NoSQL 是以 key-value 的形式存储的，和传统的关系型数据库不一样，不一定遵循传统数据库的一些基本要求，比如说 SQL 标准，ACID 属性，表结构等等，这类数据库主要有以下特点：非关系型的、分布式的、开源的、水平可扩展的。NoSQL 使用场景有：对数据高并发读写、对海量数据的高效率存储和访问、对数据的高可扩展性和高可用性等等。</p>
+<h4 id="redis数据类型"><a href="#redis数据类型" class="headerlink" title="redis数据类型"></a>redis数据类型</h4><p><strong>String（字符串）</strong></p>
+<p>string 是 redis 最基本的类型，你可以理解成与 Memcached 一模一样的类型，一个 key 对应一个 value。</p>
+<p>string 类型是二进制安全的。意思是 redis 的 string 可以包含任何数据。比如jpg图片或者序列化的对象。</p>
+<p>string 类型是 Redis 最基本的数据类型，string 类型的值最大能存储 512MB。</p>
+<p><strong>Hash（哈希）</strong></p>
+<p>Redis hash 是一个键值(key=&gt;value)对集合。</p>
+<p>Redis hash 是一个 string 类型的 field 和 value 的映射表，hash 特别适合用于存储对象。</p>
+<p><strong>List（列表）</strong></p>
+<p>Redis 列表是简单的字符串列表，按照插入顺序排序。你可以添加一个元素到列表的头部（左边）或者尾部（右边）。</p>
+<p><strong>Set（集合）</strong></p>
+<p>Redis 的 Set 是 string 类型的无序集合。</p>
+<p>集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是 O(1)。</p>
+<p><strong>zset（sorted set：有序集合）</strong></p>
+<p>Redis  zset 和 set 一样也是string类型元素的集合,且不允许重复的成员。</p>
+<p>不同的是每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。</p>
+<p>zset的成员是唯一的,但分数(score)却可以重复。</p>
+<h3 id="Springboot如何集成使用redis"><a href="#Springboot如何集成使用redis" class="headerlink" title="Springboot如何集成使用redis"></a>Springboot如何集成使用redis</h3><p><strong>1.添加依赖</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br> <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
-<p>最后会发现表格会根据打印页面的大小进行分行，不会出现一行数据被分成两页的情况了。</p>
+<p><strong>2.创建Redis的Config类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Configuration</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">RedisConfig</span> &#123;<br><br>    <span class="hljs-meta">@Bean</span><br>    <span class="hljs-keyword">public</span> RedisTemplate&lt;String, Object&gt; <span class="hljs-title function_">redisTemplate</span><span class="hljs-params">(RedisConnectionFactory connectionFactory)</span> &#123;<br>        <span class="hljs-comment">// 创建redisTemplate</span><br>        RedisTemplate&lt;String, Object&gt; redisTemplate = <span class="hljs-keyword">new</span> <span class="hljs-title class_">RedisTemplate</span>&lt;&gt;();<br>        redisTemplate.setConnectionFactory(connectionFactory);<br><br>        <span class="hljs-comment">// 使用Jackson2JsonRedisSerialize替换默认序列化</span><br>        <span class="hljs-type">Jackson2JsonRedisSerializer</span> <span class="hljs-variable">jackson2JsonRedisSerializer</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> 	 <span class="hljs-title class_">Jackson2JsonRedisSerializer</span>(Object.class);<br><br>        <span class="hljs-type">ObjectMapper</span> <span class="hljs-variable">objectMapper</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ObjectMapper</span>();<br>        objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);<br>        objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);<br><br>        jackson2JsonRedisSerializer.setObjectMapper(objectMapper);<br><br>        <span class="hljs-comment">// key采用String的序列化方式</span><br>        redisTemplate.setKeySerializer(<span class="hljs-keyword">new</span> <span class="hljs-title class_">StringRedisSerializer</span>());<br>        <span class="hljs-comment">// value序列化方式采用jackson</span><br>        redisTemplate.setValueSerializer(jackson2JsonRedisSerializer);<br>        <span class="hljs-comment">// hash的key也采用String的序列化方式</span><br>        redisTemplate.setHashKeySerializer(<span class="hljs-keyword">new</span> <span class="hljs-title class_">StringRedisSerializer</span>());<br>        <span class="hljs-comment">// hash的value序列化方式采用jackson</span><br>        redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer);<br>        redisTemplate.afterPropertiesSet();<br>        <span class="hljs-keyword">return</span> redisTemplate;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
+<p><strong>3.启动类上添加@EnableCaching注解</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@SpringBootApplication()</span><br><span class="hljs-meta">@EnableCaching</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyspringbootApplication</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        SpringApplication.run(MyspringbootApplication.class, args);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>到这里就完成springboot集成redis了。</p>
+<h3 id="redis数据操作"><a href="#redis数据操作" class="headerlink" title="redis数据操作"></a>redis数据操作</h3>
               
             </div>
             <hr/>
             <div>
               <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
   
   
 </div>
@@ -311,8 +312,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>页面打印表格换页问题</div>
-      <div>https://43.138.188.15/2022/05/18/页面打印表格换页问题/</div>
+      <div>springboot集成redis</div>
+      <div>https://43.138.188.15/2022/06/30/springboot集成redis/</div>
     </div>
     <div class="license-meta">
       
@@ -324,7 +325,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年5月18日</div>
+          <div>2022年6月30日</div>
         </div>
       
       
@@ -354,9 +355,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/05/22/npm%20install%E9%94%99%E8%AF%AF%E4%B9%8Bnode-js%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98/" title="npm install错误之node版本问题">
+                      <a href="/2022/06/30/redisTemplate%E6%93%8D%E4%BD%9Credis/" title="redisTemplate操作redis">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">npm install错误之node版本问题</span>
+                        <span class="hidden-mobile">redisTemplate操作redis</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -364,8 +365,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/05/13/elementUI%E5%90%88%E5%B9%B6%E7%9B%B8%E5%90%8C%E6%95%B0%E6%8D%AE%E5%88%97/" title="elementUI合并相同数据列">
-                        <span class="hidden-mobile">elementUI合并相同数据列</span>
+                      <a href="/2022/06/27/Vue%E7%BC%96%E5%86%99token%E7%9A%84%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81/" title="Vue编写token的登录验证">
+                        <span class="hidden-mobile">Vue编写token的登录验证</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
