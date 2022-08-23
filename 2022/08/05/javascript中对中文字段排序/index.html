@@ -16,21 +16,21 @@
   <meta name="author" content="Evan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="redisTemplate操作redis1.String操作 123456789&#x2F;&#x2F;String传入redis redisTemplate.opsForValue().set(key, value);&#x2F;&#x2F;从redis获取 Object value &#x3D; redisTemplate.opsForValue().get(key);&#x2F;&#x2F;设置过期时间long time &#x3D;60;redisTemplate.o">
+    <meta name="description" content="用javascript对数组中的中文字段进行排序可以使用对象字面量来实现。 123456789101112131415161718var o &#x3D; [&amp;#123;id : 007, type : &quot;广州&quot;&amp;#125;, 	 &amp;#123;id : 005, type : &quot;深圳&quot;&amp;#125;,	 &amp;#123;id : 008, type : &quot;东莞&amp;q">
 <meta property="og:type" content="article">
-<meta property="og:title" content="redisTemplate操作redis">
-<meta property="og:url" content="https://43.138.188.15/2022/06/30/redisTemplate%E6%93%8D%E4%BD%9Credis/index.html">
+<meta property="og:title" content="javascript中对中文字段排序">
+<meta property="og:url" content="https://43.138.188.15/2022/08/05/javascript%E4%B8%AD%E5%AF%B9%E4%B8%AD%E6%96%87%E5%AD%97%E6%AE%B5%E6%8E%92%E5%BA%8F/index.html">
 <meta property="og:site_name" content="EvanYoung">
-<meta property="og:description" content="redisTemplate操作redis1.String操作 123456789&#x2F;&#x2F;String传入redis redisTemplate.opsForValue().set(key, value);&#x2F;&#x2F;从redis获取 Object value &#x3D; redisTemplate.opsForValue().get(key);&#x2F;&#x2F;设置过期时间long time &#x3D;60;redisTemplate.o">
+<meta property="og:description" content="用javascript对数组中的中文字段进行排序可以使用对象字面量来实现。 123456789101112131415161718var o &#x3D; [&amp;#123;id : 007, type : &quot;广州&quot;&amp;#125;, 	 &amp;#123;id : 005, type : &quot;深圳&quot;&amp;#125;,	 &amp;#123;id : 008, type : &quot;东莞&amp;q">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-30T08:47:59.000Z">
-<meta property="article:modified_time" content="2022-06-30T09:15:18.179Z">
+<meta property="article:published_time" content="2022-08-05T08:39:29.000Z">
+<meta property="article:modified_time" content="2022-08-05T08:46:04.984Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>redisTemplate操作redis - EvanYoung</title>
+  <title>javascript中对中文字段排序 - EvanYoung</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,7 +193,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="redisTemplate操作redis"></span>
+            <span id="subtitle" data-typed-text="javascript中对中文字段排序"></span>
           
         </div>
 
@@ -204,8 +204,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-30 16:47" pubdate>
-          2022年6月30日 下午
+        <time datetime="2022-08-05 16:39" pubdate>
+          2022年8月5日 下午
         </time>
       </span>
     
@@ -216,7 +216,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.1k 字
+          603 字
         
       </span>
     
@@ -227,7 +227,7 @@
         
         
         
-          26 分钟
+          6 分钟
         
       </span>
     
@@ -265,27 +265,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">redisTemplate操作redis</h1>
+            <h1 style="display: none">javascript中对中文字段排序</h1>
             
             <div class="markdown-body">
               
-              <h1 id="redisTemplate操作redis"><a href="#redisTemplate操作redis" class="headerlink" title="redisTemplate操作redis"></a>redisTemplate操作redis</h1><p><strong>1.String操作</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//String传入redis </span><br>redisTemplate.opsForValue().set(key, value);<br><br><span class="hljs-comment">//从redis获取 </span><br><span class="hljs-type">Object</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> redisTemplate.opsForValue().get(key);<br><br><span class="hljs-comment">//设置过期时间</span><br><span class="hljs-type">long</span> <span class="hljs-variable">time</span> <span class="hljs-operator">=</span><span class="hljs-number">60</span>;<br>redisTemplate.opsForValue().set(key, value, time, TimeUnit.SECONDS);<br></code></pre></td></tr></table></figure>
-
-<p><strong>2.key操作</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//判断key是否存在</span><br><span class="hljs-type">Boolean</span> <span class="hljs-variable">exist</span> <span class="hljs-operator">=</span>redisTemplate.hasKey(key);<br><br><span class="hljs-comment">//设置key过期时间</span><br><span class="hljs-type">long</span> <span class="hljs-variable">time</span> <span class="hljs-operator">=</span> <span class="hljs-number">60</span>;<br>redisTemplate.expire(key, time, TimeUnit.SECONDS);<br><br><span class="hljs-comment">//获取key过期时间</span><br><span class="hljs-type">Long</span> <span class="hljs-variable">expire</span> <span class="hljs-operator">=</span> redisTemplate.getExpire(key, TimeUnit.SECONDS);<br><br><span class="hljs-comment">// 删除key</span><br>redisTemplate.delete(key);<br></code></pre></td></tr></table></figure>
-
-<p><strong>3.散列操作</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 放入一个 hash ( key value ) item是hash的key</span><br>redisTemplate.opsForHash().put(key, item, value);<br><br><span class="hljs-comment">// 向hash中存放一个map</span><br>redisTemplate.opsForHash().putAll(key, map);<br><br><span class="hljs-comment">// 获取一个hash 的 所有key-value</span><br>Map&lt;Object, Object&gt; entries = redisTemplate.opsForHash().entries(key);<br><br> <span class="hljs-comment">// 获取一个hash 的 指定key 的value</span><br><span class="hljs-type">Object</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> redisTemplate.opsForHash().get(key, item);<br><br><span class="hljs-comment">// 删除指定 hash key 的value</span><br>redisTemplate.opsForHash().delete(key, item);<br><br> <span class="hljs-comment">// 是否存在 指定 hash 的key</span><br><span class="hljs-type">Boolean</span> <span class="hljs-variable">exist</span> <span class="hljs-operator">=</span> redisTemplate.opsForHash().hasKey(key, item);<br></code></pre></td></tr></table></figure>
-
-<p><strong>4.列表操作</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 列表右推入</span><br>redisTemplate.opsForList().rightPush(key, value);<br><br><span class="hljs-comment">// 列表左推入</span><br>redisTemplate.opsForList().leftPush(key, value);<br><br><span class="hljs-comment">// 列表左弹出</span><br><span class="hljs-type">Object</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> redisTemplate.opsForList().leftPop(key);<br><br><span class="hljs-comment">// 列表右弹出</span><br><span class="hljs-type">Object</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> redisTemplate.opsForList().rightPop(key);<br><br><span class="hljs-comment">// 将list右推入列表</span><br>redisTemplate.opsForList().rightPushAll(key, list);<br><br><span class="hljs-comment">// 修改列表指定索引的值</span><br>redisTemplate.opsForList().set(key, index, value);<br> <br><span class="hljs-comment">// 获取列表指定索引的值</span><br><span class="hljs-type">Object</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> redisTemplate.opsForList().index(key, index);<br></code></pre></td></tr></table></figure>
-
-<p><strong>5.set 操作</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// set 中存储值</span><br>redisTemplate.opsForSet().add(key, value1, value2);<br><br><span class="hljs-comment">// 从 set 中取值</span><br>Set&lt;Object&gt; members = redisTemplate.opsForSet().members(key);<br><br><span class="hljs-comment">// 判定 set 中是否存在 key-value</span><br> <span class="hljs-type">Boolean</span> <span class="hljs-variable">member</span> <span class="hljs-operator">=</span> redisTemplate.opsForSet().isMember(key, value);<br><br><span class="hljs-comment">//查询set长度</span><br>redisTemplate.opsForSet().size(key);<br><br><span class="hljs-comment">//从set中移除某些个元素</span><br>redisTemplate.opsForSet().remove(key,values);<br><br><span class="hljs-comment">//移除整个set</span><br>redisTemplate.delete(key);<br></code></pre></td></tr></table></figure>
-
-<p><strong>6.zset操作</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//往Zset中添加元素</span><br>redisTemplate.opsForZSet().add(key, value, score);<br><br><span class="hljs-comment">//根据索引获取Zset的元素</span><br>redisTemplate.opsForZSet().range(key,begin,end);<br><br><span class="hljs-comment">//获取Zset的所有元素</span><br>getZset(key,<span class="hljs-number">0</span>,-<span class="hljs-number">1</span>);<br><br><span class="hljs-comment">// 往Zset中添加多个元素</span><br><span class="hljs-comment">// DefaultTypedTuple&lt;String&gt; p1 = new DefaultTypedTuple&lt;&gt;(&quot;value1&quot;, 1.0);</span><br>HashSet&lt;DefaultTypedTuple&lt;String&gt;&gt; defaultTypedTuples = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashSet</span>&lt;&gt;(list);<br>redisTemplate.opsForZSet().add(key,defaultTypedTuples);<br><br><span class="hljs-comment">//获取Zset中指定元素的分数</span><br>redisTemplate.opsForZSet().score(key,value);<br>    <br><span class="hljs-comment">//获取Zset集合的大小</span><br>redisTemplate.opsForZSet().size(key);<br>    <br><span class="hljs-comment">//获取Zset指定分数内集合的大小</span><br>redisTemplate.opsForZSet().count(key,begin,end);<br>    <br><span class="hljs-comment">//获取Zset指定分数内的集合</span><br>redisTemplate.opsForZSet().rangeByScore(key,begin,end);<br>    <br><span class="hljs-comment">//根据 Index 获取Zset集合 (包括分数)</span><br>redisTemplate.opsForZSet().rangeWithScores(key,begin, end);<br>    <br><span class="hljs-comment">//获取Zset集合</span><br>getZsetWithScore(key,<span class="hljs-number">0L</span>, -<span class="hljs-number">1L</span>);<br><br><span class="hljs-comment">//获取指定成员的排名   从大到小排   a,b,c,d     a排0</span><br>redisTemplate.opsForZSet().rank(key,value);<br><br><span class="hljs-comment">//获取指定成员的排名   从大到小排   a,b,c,d     a排3</span><br>redisTemplate.opsForZSet().reverseRank(key,value);<br> <br><span class="hljs-comment">//从集合中删除指定元素</span><br>redisTemplate.opsForZSet().remove(key,value);<br>    <br><span class="hljs-comment">//从集合中删除指定范围索引元素</span><br>redisTemplate.opsForZSet().removeRange(key,begin,end);<br>  <br><span class="hljs-comment">//从集合中删除指定范围分数元素</span><br>redisTemplate.opsForZSet().removeRangeByScore(key,begin,end);<br>   <br><span class="hljs-comment">//修改指定元素的分数</span><br>redisTemplate.opsForZSet().incrementScore(key,value,score);<br> <br></code></pre></td></tr></table></figure>
+              <h2 id="用javascript对数组中的中文字段进行排序"><a href="#用javascript对数组中的中文字段进行排序" class="headerlink" title="用javascript对数组中的中文字段进行排序"></a>用javascript对数组中的中文字段进行排序</h2><p>可以使用对象字面量来实现。</p>
+<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-keyword">var</span> o = [&#123;<span class="hljs-attribute">id :</span><span class="hljs-string"> 007, type</span> : <span class="hljs-string">&quot;广州&quot;</span>&#125;, <br>	 &#123;<span class="hljs-attribute">id :</span><span class="hljs-string"> 005, type</span> : <span class="hljs-string">&quot;深圳&quot;</span>&#125;,<br>	 &#123;<span class="hljs-attribute">id :</span><span class="hljs-string"> 008, type</span> : <span class="hljs-string">&quot;东莞&quot;</span>&#125;, <br>	 &#123;<span class="hljs-attribute">id :</span><span class="hljs-string"> 003, type</span> : <span class="hljs-string">&quot;中山&quot;</span>&#125;, <br>	 &#123;<span class="hljs-attribute">id :</span><span class="hljs-string"> 002, type</span> : <span class="hljs-string">&quot;深圳&quot;</span>&#125;, <br>	 &#123;<span class="hljs-attribute">id :</span><span class="hljs-string"> 006, type</span> : <span class="hljs-string">&quot;佛山&quot;</span>&#125;];<br><span class="hljs-keyword">var</span> compareData = &#123;<br>	<span class="hljs-string">&quot;东莞&quot;</span> : <span class="hljs-number">1</span>,<br>	<span class="hljs-string">&quot;佛山&quot;</span> : <span class="hljs-number">2</span>,<br>	<span class="hljs-string">&quot;广州&quot;</span> : <span class="hljs-number">3</span>,<br>	<span class="hljs-string">&quot;深圳&quot;</span> : <span class="hljs-number">4</span>,<br>	<span class="hljs-string">&quot;顺德&quot;</span> : <span class="hljs-number">5</span>,<br>	<span class="hljs-string">&quot;中山&quot;</span> : <span class="hljs-number">6</span><br>&#125;;<br>l = o.sort(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compare</span>(<span class="hljs-params">a,b</span>)</span>&#123;<span class="hljs-keyword">return</span> compareData[a.type] - compareData[b.type];&#125;);<br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; l.length; i++)&#123;<br>    <span class="hljs-built_in">document</span>.write(l[i][<span class="hljs-string">&quot;type&quot;</span>]);<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
               
@@ -324,8 +309,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>redisTemplate操作redis</div>
-      <div>https://43.138.188.15/2022/06/30/redisTemplate操作redis/</div>
+      <div>javascript中对中文字段排序</div>
+      <div>https://43.138.188.15/2022/08/05/javascript中对中文字段排序/</div>
     </div>
     <div class="license-meta">
       
@@ -337,7 +322,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年6月30日</div>
+          <div>2022年8月5日</div>
         </div>
       
       
@@ -367,9 +352,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/08/05/javascript%E4%B8%AD%E5%AF%B9%E4%B8%AD%E6%96%87%E5%AD%97%E6%AE%B5%E6%8E%92%E5%BA%8F/" title="javascript中对中文字段排序">
+                      <a href="/2022/08/23/SQL-FIND-IN-SET%EF%BC%88%EF%BC%89%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/" title="SQL-FIND_IN_SET（）函数的使用">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">javascript中对中文字段排序</span>
+                        <span class="hidden-mobile">SQL-FIND_IN_SET（）函数的使用</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -377,8 +362,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/30/springboot%E9%9B%86%E6%88%90redis/" title="springboot集成redis">
-                        <span class="hidden-mobile">springboot集成redis</span>
+                      <a href="/2022/06/30/redisTemplate%E6%93%8D%E4%BD%9Credis/" title="redisTemplate操作redis">
+                        <span class="hidden-mobile">redisTemplate操作redis</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
