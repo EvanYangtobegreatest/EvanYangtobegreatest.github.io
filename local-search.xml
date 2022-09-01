@@ -4,6 +4,44 @@
   
   
   <entry>
+    <title>mybatis动态字段传值问题</title>
+    <link href="/2022/09/01/mybatis%E5%8A%A8%E6%80%81%E5%AD%97%E6%AE%B5%E4%BC%A0%E5%80%BC%E9%97%AE%E9%A2%98/"/>
+    <url>/2022/09/01/mybatis%E5%8A%A8%E6%80%81%E5%AD%97%E6%AE%B5%E4%BC%A0%E5%80%BC%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h2 id="mybatis动态字段传值问题"><a href="#mybatis动态字段传值问题" class="headerlink" title="mybatis动态字段传值问题"></a>mybatis动态字段传值问题</h2><p>开发时有这样一个需求，sql语句的字段根据传值查询</p><p>一般都会这样写</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span>  Student <span class="hljs-keyword">where</span> #&#123;fieldname&#125; <span class="hljs-keyword">like</span> &quot;%&quot;#&#123;keywords&#125;&quot;%&quot;<br></code></pre></td></tr></table></figure><p>但这条sql语句查出来的结果为0；</p><p>原因在于#{}为了防止sql注入都会给传入的参数加一个双引号，也就是上面的sql语句实际是这样的：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql">fieldname:&quot;name&quot;,keywords<span class="hljs-operator">=</span>&quot;杨&quot;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span>  Student <span class="hljs-keyword">where</span> &quot;fieldname&quot;  <span class="hljs-keyword">like</span> &quot;%杨%&quot;<br></code></pre></td></tr></table></figure><p>数据库找不到字段 “fieldname” ，所以查询结果为0；</p><p>所以这种情况下就可以用到${},${}将传入的参数直接显示生成在sql中，不会添加引号。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql">fieldname:&quot;name&quot;,keywords<span class="hljs-operator">=</span>&quot;杨&quot;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span>  Student <span class="hljs-keyword">where</span> $&#123;fieldname&#125; <span class="hljs-keyword">like</span> &quot;%&quot;#&#123;keywords&#125;&quot;%&quot; <br>生成为<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span>  Student <span class="hljs-keyword">where</span> name <span class="hljs-keyword">like</span> &quot;%杨%&quot;<br></code></pre></td></tr></table></figure><p>所以#{}可以防止sql注入，在我们确定传入的值是安全的情况下，例如传的变量字段，那么就可以使用${}。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>笔记</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>修改springboot内嵌tomcat上传文件大小</title>
+    <link href="/2022/09/01/%E4%BF%AE%E6%94%B9springboot%E5%86%85%E5%B5%8Ctomcat%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F/"/>
+    <url>/2022/09/01/%E4%BF%AE%E6%94%B9springboot%E5%86%85%E5%B5%8Ctomcat%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F/</url>
+    
+    <content type="html"><![CDATA[<h2 id="修改springboot内嵌tomcat上传文件大小"><a href="#修改springboot内嵌tomcat上传文件大小" class="headerlink" title="修改springboot内嵌tomcat上传文件大小"></a>修改springboot内嵌tomcat上传文件大小</h2><p><strong>错误信息:</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">The field file exceeds its maximum permitted size of <span class="hljs-number">1048576</span> bytes.<br></code></pre></td></tr></table></figure><p><strong>原因是因为SpringBoot内嵌tomcat默认所能上传的文件大小为1M,超出这个就会报错。</strong></p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p><strong>1.修改application.yml配置文件</strong></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xml">spring:<br>  http:<br>    multipart:<br>      enabled: true<br>      max-file-size: 30MB<br>      max-request-size: 30MB<br></code></pre></td></tr></table></figure><p><strong>2.编写配置类</strong></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.example.myspringboot.config;<br><br><span class="hljs-keyword">import</span> org.springframework.boot.web.servlet.MultipartConfigFactory;<br><span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;<br><span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;<br><span class="hljs-keyword">import</span> org.springframework.util.unit.DataSize;<br><br><span class="hljs-keyword">import</span> javax.servlet.MultipartConfigElement;<br><br><span class="hljs-meta">@Configuration</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MulterFile</span> &#123;<br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 文件上传配置</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-meta">@Bean</span><br>    <span class="hljs-keyword">public</span> MultipartConfigElement <span class="hljs-title function_">multipartConfigElement</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-type">MultipartConfigFactory</span> <span class="hljs-variable">factory</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MultipartConfigFactory</span>();<br>        <span class="hljs-comment">//文件最大</span><br>        factory.setMaxFileSize(DataSize.parse(<span class="hljs-string">&quot;30960KB&quot;</span>)); <span class="hljs-comment">//KB,MB</span><br>        <span class="hljs-comment">/// 设置总上传数据总大小</span><br>        factory.setMaxRequestSize(DataSize.parse(<span class="hljs-string">&quot;309600KB&quot;</span>));<br>        <span class="hljs-keyword">return</span> factory.createMultipartConfig();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>笔记</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Mybatis-plus-generator代码自动生成工具，自动生成实体类</title>
     <link href="/2022/08/29/Mybatis-plus-generator%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7%EF%BC%8C%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%AE%9E%E4%BD%93%E7%B1%BB/"/>
     <url>/2022/08/29/Mybatis-plus-generator%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7%EF%BC%8C%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%AE%9E%E4%BD%93%E7%B1%BB/</url>
