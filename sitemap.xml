@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://43.138.188.15/2022/09/02/axios%E4%BC%A0%E9%80%92%E6%95%B0%E7%BB%84%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2022-09-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://43.138.188.15/2022/09/01/mybatis%E5%8A%A8%E6%80%81%E5%AD%97%E6%AE%B5%E4%BC%A0%E5%80%BC%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2022-09-01</lastmod>
@@ -238,7 +247,7 @@
 
   <url>
     <loc>https://43.138.188.15/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -246,77 +255,77 @@
   
   <url>
     <loc>https://43.138.188.15/tags/Java/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/tags/%E9%9B%86%E5%90%88/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/tags/vue/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/tags/springboot/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/tags/Java%E6%A1%86%E6%9E%B6/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/tags/mybatis/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/tags/Web/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/tags/elementUI/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/tags/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/tags/MySql/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -325,35 +334,35 @@
   
   <url>
     <loc>https://43.138.188.15/categories/Java%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/categories/JAVA%E6%A1%86%E6%9E%B6/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/categories/Web/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://43.138.188.15/categories/%E9%A1%B9%E7%9B%AE/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

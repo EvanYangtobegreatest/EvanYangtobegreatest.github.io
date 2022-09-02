@@ -16,21 +16,21 @@
   <meta name="author" content="Evan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="mybatis动态字段传值问题开发时有这样一个需求，sql语句的字段根据传值查询 一般都会这样写 1select * from  Student where #&amp;#123;fieldname&amp;#125; like &quot;%&quot;#&amp;#123;keywords&amp;#125;&quot;%&quot;  但这条sql语句查出来的结果为0； 原因在于#{}为了防止sql注入都会给传入的参数加一">
+    <meta name="description" content="axios传递数组参数问题最近开发时，写批量删除功能时，发现我前端传的值，后端一直获取不了。查了半天才发现原因所在。 后来发现axios传不了数组参数，如果使用序列化库qs的话，那后端无法通过数组参数获取前端的值。 123this.$qs.stringify(&amp;#123;&amp;#x27;ids&amp;#x27;:[1,2,3,4]&amp;#125;))这样写的话产生的形式为:ids&#x3D;1&amp;ids&#x3D;2&amp;amp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mybatis动态字段传值问题">
-<meta property="og:url" content="https://43.138.188.15/2022/09/01/mybatis%E5%8A%A8%E6%80%81%E5%AD%97%E6%AE%B5%E4%BC%A0%E5%80%BC%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="axios传递数组参数问题">
+<meta property="og:url" content="https://43.138.188.15/2022/09/02/axios%E4%BC%A0%E9%80%92%E6%95%B0%E7%BB%84%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="EvanYoung">
-<meta property="og:description" content="mybatis动态字段传值问题开发时有这样一个需求，sql语句的字段根据传值查询 一般都会这样写 1select * from  Student where #&amp;#123;fieldname&amp;#125; like &quot;%&quot;#&amp;#123;keywords&amp;#125;&quot;%&quot;  但这条sql语句查出来的结果为0； 原因在于#{}为了防止sql注入都会给传入的参数加一">
+<meta property="og:description" content="axios传递数组参数问题最近开发时，写批量删除功能时，发现我前端传的值，后端一直获取不了。查了半天才发现原因所在。 后来发现axios传不了数组参数，如果使用序列化库qs的话，那后端无法通过数组参数获取前端的值。 123this.$qs.stringify(&amp;#123;&amp;#x27;ids&amp;#x27;:[1,2,3,4]&amp;#125;))这样写的话产生的形式为:ids&#x3D;1&amp;ids&#x3D;2&amp;amp">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-01T09:35:10.000Z">
-<meta property="article:modified_time" content="2022-09-01T09:57:42.908Z">
+<meta property="article:published_time" content="2022-09-02T08:19:38.000Z">
+<meta property="article:modified_time" content="2022-09-02T08:38:46.834Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>mybatis动态字段传值问题 - EvanYoung</title>
+  <title>axios传递数组参数问题 - EvanYoung</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,7 +193,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="mybatis动态字段传值问题"></span>
+            <span id="subtitle" data-typed-text="axios传递数组参数问题"></span>
           
         </div>
 
@@ -204,8 +204,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-01 17:35" pubdate>
-          2022年9月1日 下午
+        <time datetime="2022-09-02 16:19" pubdate>
+          2022年9月2日 下午
         </time>
       </span>
     
@@ -216,7 +216,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          647 字
+          431 字
         
       </span>
     
@@ -227,7 +227,7 @@
         
         
         
-          6 分钟
+          4 分钟
         
       </span>
     
@@ -265,23 +265,18 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">mybatis动态字段传值问题</h1>
+            <h1 style="display: none">axios传递数组参数问题</h1>
             
             <div class="markdown-body">
               
-              <h2 id="mybatis动态字段传值问题"><a href="#mybatis动态字段传值问题" class="headerlink" title="mybatis动态字段传值问题"></a>mybatis动态字段传值问题</h2><p>开发时有这样一个需求，sql语句的字段根据传值查询</p>
-<p>一般都会这样写</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span>  Student <span class="hljs-keyword">where</span> #&#123;fieldname&#125; <span class="hljs-keyword">like</span> &quot;%&quot;#&#123;keywords&#125;&quot;%&quot;<br></code></pre></td></tr></table></figure>
+              <h2 id="axios传递数组参数问题"><a href="#axios传递数组参数问题" class="headerlink" title="axios传递数组参数问题"></a>axios传递数组参数问题</h2><p>最近开发时，写批量删除功能时，发现我前端传的值，后端一直获取不了。查了半天才发现原因所在。</p>
+<p>后来发现axios传不了数组参数，如果使用序列化库qs的话，那后端无法通过数组参数获取前端的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">this</span>.<span class="hljs-property">$qs</span>.<span class="hljs-title function_">stringify</span>(&#123;<span class="hljs-string">&#x27;ids&#x27;</span>:[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]&#125;))<br>这样写的话产生的形式为:ids=<span class="hljs-number">1</span>&amp;ids=<span class="hljs-number">2</span>&amp;id=<span class="hljs-number">3</span>&amp;id=<span class="hljs-number">4</span><br>而我后端获取的是一个数组参数，显然不符合的。<br></code></pre></td></tr></table></figure>
 
-<p>但这条sql语句查出来的结果为0；</p>
-<p>原因在于#{}为了防止sql注入都会给传入的参数加一个双引号，也就是上面的sql语句实际是这样的：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql">fieldname:&quot;name&quot;,keywords<span class="hljs-operator">=</span>&quot;杨&quot;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span>  Student <span class="hljs-keyword">where</span> &quot;fieldname&quot;  <span class="hljs-keyword">like</span> &quot;%杨%&quot;<br></code></pre></td></tr></table></figure>
+<p>所以想要在不改动后端参数形式的情况下，在前端应该这样修改：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">this</span>.<span class="hljs-property">$qs</span>.<span class="hljs-title function_">stringify</span>(&#123;<span class="hljs-string">&#x27;ids&#x27;</span>:[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]+<span class="hljs-string">&#x27;&#x27;</span>&#125;))<br>拼接一个空的字符串，使整个value变成一个字符串，那么产生的形式就成为：<br>ids=<span class="hljs-string">&quot;[1,2,3,4]&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p>数据库找不到字段 “fieldname” ，所以查询结果为0；</p>
-<p>所以这种情况下就可以用到${},${}将传入的参数直接显示生成在sql中，不会添加引号。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql">fieldname:&quot;name&quot;,keywords<span class="hljs-operator">=</span>&quot;杨&quot;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span>  Student <span class="hljs-keyword">where</span> $&#123;fieldname&#125; <span class="hljs-keyword">like</span> &quot;%&quot;#&#123;keywords&#125;&quot;%&quot; <br>生成为<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span>  Student <span class="hljs-keyword">where</span> name <span class="hljs-keyword">like</span> &quot;%杨%&quot;<br></code></pre></td></tr></table></figure>
-
-<p>所以#{}可以防止sql注入，在我们确定传入的值是安全的情况下，例如传的变量字段，那么就可以使用${}。</p>
+<p>那么我后端就可以通过(Integer[] ids)来获取前端的值。</p>
 
               
             </div>
@@ -319,8 +314,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>mybatis动态字段传值问题</div>
-      <div>https://43.138.188.15/2022/09/01/mybatis动态字段传值问题/</div>
+      <div>axios传递数组参数问题</div>
+      <div>https://43.138.188.15/2022/09/02/axios传递数组参数问题/</div>
     </div>
     <div class="license-meta">
       
@@ -332,7 +327,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月1日</div>
+          <div>2022年9月2日</div>
         </div>
       
       
@@ -362,18 +357,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/02/axios%E4%BC%A0%E9%80%92%E6%95%B0%E7%BB%84%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/" title="axios传递数组参数问题">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">axios传递数组参数问题</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/01/%E4%BF%AE%E6%94%B9springboot%E5%86%85%E5%B5%8Ctomcat%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F/" title="修改springboot内嵌tomcat上传文件大小">
-                        <span class="hidden-mobile">修改springboot内嵌tomcat上传文件大小</span>
+                      <a href="/2022/09/01/mybatis%E5%8A%A8%E6%80%81%E5%AD%97%E6%AE%B5%E4%BC%A0%E5%80%BC%E9%97%AE%E9%A2%98/" title="mybatis动态字段传值问题">
+                        <span class="hidden-mobile">mybatis动态字段传值问题</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

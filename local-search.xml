@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>axios传递数组参数问题</title>
+    <link href="/2022/09/02/axios%E4%BC%A0%E9%80%92%E6%95%B0%E7%BB%84%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/"/>
+    <url>/2022/09/02/axios%E4%BC%A0%E9%80%92%E6%95%B0%E7%BB%84%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h2 id="axios传递数组参数问题"><a href="#axios传递数组参数问题" class="headerlink" title="axios传递数组参数问题"></a>axios传递数组参数问题</h2><p>最近开发时，写批量删除功能时，发现我前端传的值，后端一直获取不了。查了半天才发现原因所在。</p><p>后来发现axios传不了数组参数，如果使用序列化库qs的话，那后端无法通过数组参数获取前端的值。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">this</span>.<span class="hljs-property">$qs</span>.<span class="hljs-title function_">stringify</span>(&#123;<span class="hljs-string">&#x27;ids&#x27;</span>:[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]&#125;))<br>这样写的话产生的形式为:ids=<span class="hljs-number">1</span>&amp;ids=<span class="hljs-number">2</span>&amp;id=<span class="hljs-number">3</span>&amp;id=<span class="hljs-number">4</span><br>而我后端获取的是一个数组参数，显然不符合的。<br></code></pre></td></tr></table></figure><p>所以想要在不改动后端参数形式的情况下，在前端应该这样修改：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">this</span>.<span class="hljs-property">$qs</span>.<span class="hljs-title function_">stringify</span>(&#123;<span class="hljs-string">&#x27;ids&#x27;</span>:[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]+<span class="hljs-string">&#x27;&#x27;</span>&#125;))<br>拼接一个空的字符串，使整个value变成一个字符串，那么产生的形式就成为：<br>ids=<span class="hljs-string">&quot;[1,2,3,4]&quot;</span><br></code></pre></td></tr></table></figure><p>那么我后端就可以通过(Integer[] ids)来获取前端的值。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>笔记</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>mybatis动态字段传值问题</title>
     <link href="/2022/09/01/mybatis%E5%8A%A8%E6%80%81%E5%AD%97%E6%AE%B5%E4%BC%A0%E5%80%BC%E9%97%AE%E9%A2%98/"/>
     <url>/2022/09/01/mybatis%E5%8A%A8%E6%80%81%E5%AD%97%E6%AE%B5%E4%BC%A0%E5%80%BC%E9%97%AE%E9%A2%98/</url>
