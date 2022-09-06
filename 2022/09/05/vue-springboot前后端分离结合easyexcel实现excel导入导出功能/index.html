@@ -13,24 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="Evan">
+  <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="axios传递数组参数问题最近开发时，写批量删除功能时，发现我前端传的值，后端一直获取不了。查了半天才发现原因所在。 后来发现axios传不了数组参数，如果使用序列化库qs的话，那后端无法通过数组参数获取前端的值。 123this.$qs.stringify(&amp;#123;&amp;#x27;ids&amp;#x27;:[1,2,3,4]&amp;#125;))这样写的话产生的形式为:ids&#x3D;1&amp;ids&#x3D;2&amp;amp">
+    <meta name="description" content="使用easyexcel实现excel导入导出功能基于springboot，前端使用vue，使用阿里的easyexcel实现了单sheet表导入导出，多sheet表导入导出，单数据库表导入导出，多数据库表导入导出。 首先需要搭建好spingboot和前端开发项目环境 然后就可以开始开发excel导入导出功能 首先需要引入easyexcel的maven依赖 1234567&lt;!--在pom.xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="axios传递数组参数问题">
-<meta property="og:url" content="https://43.138.188.15/2022/09/02/axios%E4%BC%A0%E9%80%92%E6%95%B0%E7%BB%84%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="vue+springboot前后端分离结合easyexcel实现excel导入导出功能">
+<meta property="og:url" content="https://43.138.188.15/2022/09/05/vue-springboot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%BB%93%E5%90%88easyexcel%E5%AE%9E%E7%8E%B0excel%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA%E5%8A%9F%E8%83%BD/index.html">
 <meta property="og:site_name" content="EvanYoung">
-<meta property="og:description" content="axios传递数组参数问题最近开发时，写批量删除功能时，发现我前端传的值，后端一直获取不了。查了半天才发现原因所在。 后来发现axios传不了数组参数，如果使用序列化库qs的话，那后端无法通过数组参数获取前端的值。 123this.$qs.stringify(&amp;#123;&amp;#x27;ids&amp;#x27;:[1,2,3,4]&amp;#125;))这样写的话产生的形式为:ids&#x3D;1&amp;ids&#x3D;2&amp;amp">
+<meta property="og:description" content="使用easyexcel实现excel导入导出功能基于springboot，前端使用vue，使用阿里的easyexcel实现了单sheet表导入导出，多sheet表导入导出，单数据库表导入导出，多数据库表导入导出。 首先需要搭建好spingboot和前端开发项目环境 然后就可以开始开发excel导入导出功能 首先需要引入easyexcel的maven依赖 1234567&lt;!--在pom.xml">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-02T08:19:38.000Z">
-<meta property="article:modified_time" content="2022-09-02T08:38:46.834Z">
+<meta property="article:published_time" content="2022-09-05T06:59:48.000Z">
+<meta property="article:modified_time" content="2022-09-05T07:16:19.541Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>axios传递数组参数问题 - EvanYoung</title>
+  <title>vue+springboot前后端分离结合easyexcel实现excel导入导出功能 - EvanYoung</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,7 +193,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="axios传递数组参数问题"></span>
+            <span id="subtitle" data-typed-text="vue+springboot前后端分离结合easyexcel实现excel导入导出功能"></span>
           
         </div>
 
@@ -204,8 +204,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-02 16:19" pubdate>
-          2022年9月2日 下午
+        <time datetime="2022-09-05 14:59" pubdate>
+          2022年9月5日 下午
         </time>
       </span>
     
@@ -216,7 +216,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          431 字
+          1.1k 字
         
       </span>
     
@@ -227,7 +227,7 @@
         
         
         
-          4 分钟
+          10 分钟
         
       </span>
     
@@ -265,45 +265,26 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">axios传递数组参数问题</h1>
+            <h1 style="display: none">vue+springboot前后端分离结合easyexcel实现excel导入导出功能</h1>
             
             <div class="markdown-body">
               
-              <h2 id="axios传递数组参数问题"><a href="#axios传递数组参数问题" class="headerlink" title="axios传递数组参数问题"></a>axios传递数组参数问题</h2><p>最近开发时，写批量删除功能时，发现我前端传的值，后端一直获取不了。查了半天才发现原因所在。</p>
-<p>后来发现axios传不了数组参数，如果使用序列化库qs的话，那后端无法通过数组参数获取前端的值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">this</span>.<span class="hljs-property">$qs</span>.<span class="hljs-title function_">stringify</span>(&#123;<span class="hljs-string">&#x27;ids&#x27;</span>:[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]&#125;))<br>这样写的话产生的形式为:ids=<span class="hljs-number">1</span>&amp;ids=<span class="hljs-number">2</span>&amp;id=<span class="hljs-number">3</span>&amp;id=<span class="hljs-number">4</span><br>而我后端获取的是一个数组参数，显然不符合的。<br></code></pre></td></tr></table></figure>
+              <h2 id="使用easyexcel实现excel导入导出功能"><a href="#使用easyexcel实现excel导入导出功能" class="headerlink" title="使用easyexcel实现excel导入导出功能"></a>使用easyexcel实现excel导入导出功能</h2><p>基于springboot，前端使用vue，使用阿里的easyexcel实现了单sheet表导入导出，多sheet表导入导出，单数据库表导入导出，多数据库表导入导出。</p>
+<p><strong>首先需要搭建好spingboot和前端开发项目环境</strong></p>
+<p>然后就可以开始开发excel导入导出功能</p>
+<p><strong>首先需要引入easyexcel的maven依赖</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--在pom.xml文件添加以下依赖  --&gt;</span><br> <span class="hljs-comment">&lt;!--阿里easyexcel 用于进行Excel处理 --&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alibaba<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>easyexcel<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.2.10<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
-<p>所以想要在不改动后端参数形式的情况下，在前端应该这样修改：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">this</span>.<span class="hljs-property">$qs</span>.<span class="hljs-title function_">stringify</span>(&#123;<span class="hljs-string">&#x27;ids&#x27;</span>:[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]+<span class="hljs-string">&#x27;&#x27;</span>&#125;))<br>拼接一个空的字符串，使整个value变成一个字符串，那么产生的形式就成为：<br>ids=<span class="hljs-string">&quot;[1,2,3,4]&quot;</span><br></code></pre></td></tr></table></figure>
+<p><strong>根据自己需要的excel表作为对象，建立一个实体类</strong></p>
+<p>有几个注解是重点</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//按照数据库表定义好实体类，为其加上注解 @ExcelProperty(value = &quot;xxx&quot;, index = 0) ，其中value值对应的是excel表的表头，index的值为数字，代表该列在excel表里面的位置，数字越小列越靠前</span><br><span class="hljs-comment">// @ExcelIgnore 使用这个注解可以在生成excel时不显示该字段</span><br><span class="hljs-comment">// @ColumnWidth(20) 自定义列宽</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">User</span> &#123;<br>    <span class="hljs-comment">// 主键id</span><br>    <span class="hljs-meta">@ExcelIgnore</span> <span class="hljs-comment">// 生成报表时忽略，不生成次字段</span><br>    <span class="hljs-keyword">private</span> Integer id;<br>    <span class="hljs-meta">@ExcelProperty(value = &quot;姓名&quot;, index = 0)</span> <span class="hljs-comment">// 定义表头名称和位置,0代表第一列</span><br>    <span class="hljs-keyword">private</span> String name;<br>    <span class="hljs-meta">@ExcelProperty(value = &quot;性别&quot;, index = 1)</span><br>    <span class="hljs-keyword">private</span> String sex;<br>    <span class="hljs-meta">@ExcelProperty(value = &quot;年龄&quot;, index = 2)</span><br>    <span class="hljs-keyword">private</span> Integer age;<br>    <span class="hljs-comment">//@ColumnWidth(20) // 定义列宽,使用自适应列宽则注释，不使用则可靠此注解自定义</span><br>    <span class="hljs-meta">@DateTimeFormat(value = &quot;yyyy-MM-dd&quot;)</span><br>    <span class="hljs-meta">@ExcelProperty(value = &quot;出生日期&quot;, index = 3)</span><br>    <span class="hljs-keyword">private</span> String birthday;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
-<p>那么我后端就可以通过(Integer[] ids)来获取前端的值。</p>
 
               
             </div>
             <hr/>
             <div>
               <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
   
   
 </div>
@@ -314,20 +295,20 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>axios传递数组参数问题</div>
-      <div>https://43.138.188.15/2022/09/02/axios传递数组参数问题/</div>
+      <div>vue+springboot前后端分离结合easyexcel实现excel导入导出功能</div>
+      <div>https://43.138.188.15/2022/09/05/vue-springboot前后端分离结合easyexcel实现excel导入导出功能/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>Evan</div>
+          <div>John Doe</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月2日</div>
+          <div>2022年9月5日</div>
         </div>
       
       
@@ -357,9 +338,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/05/vue-springboot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%BB%93%E5%90%88easyexcel%E5%AE%9E%E7%8E%B0excel%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA%E5%8A%9F%E8%83%BD/" title="vue+springboot前后端分离结合easyexcel实现excel导入导出功能">
+                      <a href="/2022/09/06/JSON%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E8%BD%ACJava%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/" title="JSON对象数组转Java对象数组">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">vue+springboot前后端分离结合easyexcel实现excel导入导出功能</span>
+                        <span class="hidden-mobile">JSON对象数组转Java对象数组</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -367,8 +348,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/01/mybatis%E5%8A%A8%E6%80%81%E5%AD%97%E6%AE%B5%E4%BC%A0%E5%80%BC%E9%97%AE%E9%A2%98/" title="mybatis动态字段传值问题">
-                        <span class="hidden-mobile">mybatis动态字段传值问题</span>
+                      <a href="/2022/09/02/axios%E4%BC%A0%E9%80%92%E6%95%B0%E7%BB%84%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/" title="axios传递数组参数问题">
+                        <span class="hidden-mobile">axios传递数组参数问题</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

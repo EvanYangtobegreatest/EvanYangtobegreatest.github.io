@@ -16,21 +16,21 @@
   <meta name="author" content="Evan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="axios传递数组参数问题最近开发时，写批量删除功能时，发现我前端传的值，后端一直获取不了。查了半天才发现原因所在。 后来发现axios传不了数组参数，如果使用序列化库qs的话，那后端无法通过数组参数获取前端的值。 123this.$qs.stringify(&amp;#123;&amp;#x27;ids&amp;#x27;:[1,2,3,4]&amp;#125;))这样写的话产生的形式为:ids&#x3D;1&amp;ids&#x3D;2&amp;amp">
+    <meta name="description" content="JSON对象数组转Java对象数组引入阿里的fastjson 12345&lt;dependency&gt;       &lt;groupId&gt;com.alibaba&lt;&#x2F;groupId&gt;       &lt;artifactId&gt;fastjson&lt;&#x2F;artifactId&gt;       &lt;version&gt;1.2.60&lt;&#x2F;version&gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="axios传递数组参数问题">
-<meta property="og:url" content="https://43.138.188.15/2022/09/02/axios%E4%BC%A0%E9%80%92%E6%95%B0%E7%BB%84%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="JSON对象数组转Java对象数组">
+<meta property="og:url" content="https://43.138.188.15/2022/09/06/JSON%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E8%BD%ACJava%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="EvanYoung">
-<meta property="og:description" content="axios传递数组参数问题最近开发时，写批量删除功能时，发现我前端传的值，后端一直获取不了。查了半天才发现原因所在。 后来发现axios传不了数组参数，如果使用序列化库qs的话，那后端无法通过数组参数获取前端的值。 123this.$qs.stringify(&amp;#123;&amp;#x27;ids&amp;#x27;:[1,2,3,4]&amp;#125;))这样写的话产生的形式为:ids&#x3D;1&amp;ids&#x3D;2&amp;amp">
+<meta property="og:description" content="JSON对象数组转Java对象数组引入阿里的fastjson 12345&lt;dependency&gt;       &lt;groupId&gt;com.alibaba&lt;&#x2F;groupId&gt;       &lt;artifactId&gt;fastjson&lt;&#x2F;artifactId&gt;       &lt;version&gt;1.2.60&lt;&#x2F;version&gt;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-02T08:19:38.000Z">
-<meta property="article:modified_time" content="2022-09-02T08:38:46.834Z">
+<meta property="article:published_time" content="2022-09-06T06:38:08.000Z">
+<meta property="article:modified_time" content="2022-09-06T09:14:49.000Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>axios传递数组参数问题 - EvanYoung</title>
+  <title>JSON对象数组转Java对象数组 - EvanYoung</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,7 +193,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="axios传递数组参数问题"></span>
+            <span id="subtitle" data-typed-text="JSON对象数组转Java对象数组"></span>
           
         </div>
 
@@ -204,8 +204,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-02 16:19" pubdate>
-          2022年9月2日 下午
+        <time datetime="2022-09-06 14:38" pubdate>
+          2022年9月6日 下午
         </time>
       </span>
     
@@ -216,7 +216,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          431 字
+          1.9k 字
         
       </span>
     
@@ -227,7 +227,7 @@
         
         
         
-          4 分钟
+          16 分钟
         
       </span>
     
@@ -265,18 +265,25 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">axios传递数组参数问题</h1>
+            <h1 style="display: none">JSON对象数组转Java对象数组</h1>
             
             <div class="markdown-body">
               
-              <h2 id="axios传递数组参数问题"><a href="#axios传递数组参数问题" class="headerlink" title="axios传递数组参数问题"></a>axios传递数组参数问题</h2><p>最近开发时，写批量删除功能时，发现我前端传的值，后端一直获取不了。查了半天才发现原因所在。</p>
-<p>后来发现axios传不了数组参数，如果使用序列化库qs的话，那后端无法通过数组参数获取前端的值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">this</span>.<span class="hljs-property">$qs</span>.<span class="hljs-title function_">stringify</span>(&#123;<span class="hljs-string">&#x27;ids&#x27;</span>:[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]&#125;))<br>这样写的话产生的形式为:ids=<span class="hljs-number">1</span>&amp;ids=<span class="hljs-number">2</span>&amp;id=<span class="hljs-number">3</span>&amp;id=<span class="hljs-number">4</span><br>而我后端获取的是一个数组参数，显然不符合的。<br></code></pre></td></tr></table></figure>
+              <h2 id="JSON对象数组转Java对象数组"><a href="#JSON对象数组转Java对象数组" class="headerlink" title="JSON对象数组转Java对象数组"></a>JSON对象数组转Java对象数组</h2><p><strong>引入阿里的fastjson</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>       <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alibaba<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>       <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>fastjson<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>       <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.2.60<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br>   <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
-<p>所以想要在不改动后端参数形式的情况下，在前端应该这样修改：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">this</span>.<span class="hljs-property">$qs</span>.<span class="hljs-title function_">stringify</span>(&#123;<span class="hljs-string">&#x27;ids&#x27;</span>:[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]+<span class="hljs-string">&#x27;&#x27;</span>&#125;))<br>拼接一个空的字符串，使整个value变成一个字符串，那么产生的形式就成为：<br>ids=<span class="hljs-string">&quot;[1,2,3,4]&quot;</span><br></code></pre></td></tr></table></figure>
+<p><strong>创建对应JSON数据的实体类</strong></p>
+<p>可以用JSON工具一键生成实体类代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">JsonRootBean</span> &#123;<br><br>    <span class="hljs-keyword">private</span> String Name;<br>    <span class="hljs-keyword">private</span> String SEX;<br>    <span class="hljs-keyword">private</span> String age;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setName</span><span class="hljs-params">(String Name)</span> &#123;<br>         <span class="hljs-built_in">this</span>.Name = Name;<br>     &#125;<br>     <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span> &#123;<br>         <span class="hljs-keyword">return</span> Name;<br>     &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setSEX</span><span class="hljs-params">(String SEX)</span> &#123;<br>         <span class="hljs-built_in">this</span>.SEX = SEX;<br>     &#125;<br>     <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getSEX</span><span class="hljs-params">()</span> &#123;<br>         <span class="hljs-keyword">return</span> SEX;<br>     &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setAge</span><span class="hljs-params">(String age)</span> &#123;<br>         <span class="hljs-built_in">this</span>.age = age;<br>     &#125;<br>     <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getAge</span><span class="hljs-params">()</span> &#123;<br>         <span class="hljs-keyword">return</span> age;<br>     &#125;<br><span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">toString</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;JsonRootBean&#123;&quot;</span> +<br>                <span class="hljs-string">&quot;SampleName=&#x27;&quot;</span> + SampleName + <span class="hljs-string">&#x27;\&#x27;&#x27;</span> +<br>                <span class="hljs-string">&quot;, Marker=&#x27;&quot;</span> + Marker + <span class="hljs-string">&#x27;\&#x27;&#x27;</span> +<br>                <span class="hljs-string">&quot;, Peak1=&#x27;&quot;</span> + Peak1 + <span class="hljs-string">&#x27;\&#x27;&#x27;</span> +<br>                <span class="hljs-string">&quot;, Peak2=&#x27;&quot;</span> + Peak2 + <span class="hljs-string">&#x27;\&#x27;&#x27;</span> +<br>                <span class="hljs-string">&#x27;&#125;&#x27;</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>那么我后端就可以通过(Integer[] ids)来获取前端的值。</p>
+<p><strong>编写生成方法</strong></p>
+<p>记得修改相关类名</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ArrayList&lt;JsonRootBean&gt; <span class="hljs-title function_">getPlatformList</span><span class="hljs-params">(String arrStr)</span> &#123;<br>      ArrayList&lt;JsonRootBean&gt; jsonContents = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;JsonRootBean&gt;();<br>      <span class="hljs-type">JSONArray</span> <span class="hljs-variable">jsonContentList</span> <span class="hljs-operator">=</span> JSON.parseArray(arrStr);<br>      <span class="hljs-keyword">for</span> (Object jsonObject : jsonContentList) &#123;<br>          <span class="hljs-type">JsonRootBean</span> <span class="hljs-variable">jsonContent</span> <span class="hljs-operator">=</span> JSONObject.parseObject(jsonObject.toString(), JsonRootBean.class);<br>          jsonContents.add(jsonContent);<br>      &#125;<br>      <span class="hljs-keyword">return</span> jsonContents;<br>  &#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>调用方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs Java">  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] arg)</span> &#123;<br>  <span class="hljs-type">String</span> <span class="hljs-variable">jsonStr</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;[&#123;</span><br><span class="hljs-string">        &quot;</span>Name<span class="hljs-string">&quot;: &quot;</span>YYW<span class="hljs-string">&quot;,</span><br><span class="hljs-string">        &quot;</span>SEX<span class="hljs-string">&quot;: &quot;</span>男<span class="hljs-string">&quot;,</span><br><span class="hljs-string">        &quot;</span>age<span class="hljs-string">&quot;: &quot;</span><span class="hljs-number">17</span><span class="hljs-string">&quot;</span><br><span class="hljs-string">&#125;,</span><br><span class="hljs-string">    &#123;</span><br><span class="hljs-string">        &quot;</span>Name<span class="hljs-string">&quot;: &quot;</span>JAVA<span class="hljs-string">&quot;,</span><br><span class="hljs-string">        &quot;</span>SEX<span class="hljs-string">&quot;: &quot;</span>男<span class="hljs-string">&quot;,</span><br><span class="hljs-string">        &quot;</span>age<span class="hljs-string">&quot;: &quot;</span><span class="hljs-number">22</span><span class="hljs-string">&quot;</span><br><span class="hljs-string">&#125;</span><br><span class="hljs-string">]&quot;</span><br><span class="hljs-comment">//调用getPlatformList方法</span><br>  ArrayList&lt;JsonRootBean&gt; platformList = getPlatformList(jsonStr);<br><span class="hljs-comment">//检验结果</span><br>   <span class="hljs-keyword">for</span> (JsonRootBean JsonRootBean: platformList)&#123;<br>            System.out.println(JsonRootBean);<br>        &#125;<br>  &#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>完成</strong></p>
 
               
             </div>
@@ -314,8 +321,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>axios传递数组参数问题</div>
-      <div>https://43.138.188.15/2022/09/02/axios传递数组参数问题/</div>
+      <div>JSON对象数组转Java对象数组</div>
+      <div>https://43.138.188.15/2022/09/06/JSON对象数组转Java对象数组/</div>
     </div>
     <div class="license-meta">
       
@@ -327,7 +334,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月2日</div>
+          <div>2022年9月6日</div>
         </div>
       
       
@@ -357,18 +364,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/05/vue-springboot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%BB%93%E5%90%88easyexcel%E5%AE%9E%E7%8E%B0excel%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA%E5%8A%9F%E8%83%BD/" title="vue+springboot前后端分离结合easyexcel实现excel导入导出功能">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">vue+springboot前后端分离结合easyexcel实现excel导入导出功能</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/01/mybatis%E5%8A%A8%E6%80%81%E5%AD%97%E6%AE%B5%E4%BC%A0%E5%80%BC%E9%97%AE%E9%A2%98/" title="mybatis动态字段传值问题">
-                        <span class="hidden-mobile">mybatis动态字段传值问题</span>
+                      <a href="/2022/09/05/vue-springboot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%BB%93%E5%90%88easyexcel%E5%AE%9E%E7%8E%B0excel%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA%E5%8A%9F%E8%83%BD/" title="vue+springboot前后端分离结合easyexcel实现excel导入导出功能">
+                        <span class="hidden-mobile">vue+springboot前后端分离结合easyexcel实现excel导入导出功能</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
