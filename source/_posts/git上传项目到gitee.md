@@ -18,7 +18,7 @@ tags:
 
 然后输入命令:
 
-```c
+```text
 git init 
 //初始化本地仓库,这个时候本地文件夹会生成一个.git文件，说明初始化成功了。
 ```
@@ -61,7 +61,7 @@ git config --global user.email "xxx"
 
 打开命令框，输入命令：
 
-```
+```text
 git remote add origin 上一步复制的链接
 ```
 
@@ -69,7 +69,7 @@ git remote add origin 上一步复制的链接
 
 输入命令：
 
-```
+```text
 git pull origin master
 ```
 
@@ -77,7 +77,7 @@ git pull origin master
 
 输入命令：
 
-```
+```text
 git add .
 ```
 
@@ -85,7 +85,7 @@ git add .
 
 输入命令：
 
-```
+```text
 git commit -m '说明’ //说明处是指提交时的备注，例如git commit -m '第一次提交’
 ```
 
@@ -93,7 +93,7 @@ git commit -m '说明’ //说明处是指提交时的备注，例如git commit 
 
 输入命令：
 
-```
+```text
 git push origin master
 //强制推送 git push -f origin master
 ```
