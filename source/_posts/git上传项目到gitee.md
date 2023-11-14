@@ -86,7 +86,7 @@ git add .
 输入命令：
 
 ```text
-git commit -m '说明’ //说明处是指提交时的备注，例如git commit -m '第一次提交’
+git commit -m '说明' //说明处是指提交时的备注，例如git commit -m '第一次提交’
 ```
 
 **7.将本地版本库推送到远程服务器**
