@@ -47,6 +47,140 @@ public class User {
     @ExcelProperty(value = "出生日期", index = 3)
     private String birthday;
 }
+```
 
+## 结合前后端
+
+#### 导出
+
+```js
+ //vue的执行函数
+exportWeb: function () {
+              // 使用axios进行GET请求
+                   this.$axios.get('/exportExcel', {
+                           responseType: 'blob', // 设置响应类型为blob
+                         })
+                           .then(response => {
+                             // 创建一个Blob对象，并下载文件
+                             const blob = new Blob([response.data], { type: response.headers['content-type'] });
+                             const link = document.createElement('a');
+                             link.href = window.URL.createObjectURL(blob);
+                             link.download = '导出'; // 设置下载的文件名
+                             link.click();
+                           })
+                           .catch(error => {
+                             // 处理请求错误
+                             console.error('文件下载失败:', error);
+                           });
+           },
+```
+
+```java
+  @RequestMapping("/api/exportExcel")
+    public void export(HttpServletResponse response) throws IOException {
+
+        response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+//        response.setCharacterEncoding("utf-8");
+//       String fileName = URLEncoder.encode("导出文件名", "UTF-8").replaceAll("\\+", "%20");
+//      response.setHeader("Content-disposition", "attachment;filename*=utf-8''" + fileName + ".xlsx");
+
+        //查询数据
+        List<Student> student = studentService.queryStudent();
+        EasyExcel.write(response.getOutputStream(), Student.class).sheet("导出文件名").doWrite(student);
+    }
+```
+
+#### 导入
+
+```html
+ //导出页面
+ <template>
+
+    <el-upload
+            class="upload-demo"
+            ref="upload"
+            action="http://localhost:8082/api/upload"
+            :on-preview="handlePreview"
+            :on-remove="handleRemove"
+            :on-success="handleSuccess"
+            :file-list="fileList"
+            :multiple="false"
+            :limit="1"
+            :auto-upload="false">
+        <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
+        <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload($event)">上传到服务器</el-button>
+        <div slot="tip" class="el-upload__tip">只能上传execl文件，且不超过500kb</div>
+    </el-upload>
+
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                limitNum: 1,  // 上传excel时，同时允许上传的最大数
+                fileList: [],   // excel文件列表
+            }
+        },
+        methods:{
+            // 成功上传到服务器后返回的内容
+            handleSuccess(e) {
+                console.log('上传成功', e)
+                this.$message(e.message);
+            },
+            // 上传文件到服务器
+            submitUpload(e) {
+
+                console.log('我要上传了', e)
+                this.$refs.upload.submit();
+            },
+
+            // 删除文件
+            handleRemove(file, fileList) {
+                console.log(file, fileList);
+            },
+            handlePreview(file) {
+                console.log(file);
+            },
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>
+```
+
+```java
+// 导出接口
+// easyexcel上传文件
+    @PostMapping("/api/upload")
+    @ResponseBody
+    public String upload(MultipartFile file) throws IOException {
+
+        EasyExcel.read(file.getInputStream(), Student.class, new StudentDataListener(studentService)).sheet().doRead();
+        return "上传成功";
+    }
+```
+
+##### 可以用配置类配置文件上传的大小
+
+```java
+@Configuration
+public class MulterFile {
+    /**
+     * 文件上传配置
+     * @return
+     */
+    @Bean
+    public MultipartConfigElement multipartConfigElement() {
+        MultipartConfigFactory factory = new MultipartConfigFactory();
+        //文件最大
+        factory.setMaxFileSize(DataSize.parse("30960KB")); //KB,MB
+        /// 设置总上传数据总大小
+        factory.setMaxRequestSize(DataSize.parse("309600KB"));
+        return factory.createMultipartConfig();
+    }
+}
 ```
 
