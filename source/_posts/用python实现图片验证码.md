@@ -25,7 +25,7 @@ pip3 install pillow
 ```python
 def gen_random_code(length=4):
     ALL_CHARS = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    return ''.join(random.choices(ALL_CHARS, k=length))python manage.py shell
+    return ''.join(random.choices(ALL_CHARS, k=length))
 ```
 
 **3.根据验证码生成图片**
