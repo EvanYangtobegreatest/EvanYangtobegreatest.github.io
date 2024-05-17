@@ -1,10 +1,10 @@
----
+```
 title: 'Django使用Vue在html中按{{}}取值失败的解决办法'
 date: 2024-02-22 17:12:06
 author: Evan
 categories: 笔记
 tags:
----
+```
 
 因为django本身有模版的概念，直接取值是从django的模版中取值的
 
@@ -35,11 +35,10 @@ tags:
 </div>
 ```
 
-**2.更改Vue的{{ }}**
-
- 改成其他 例如：{[ ]} 等等，修改方式如下：
+**2.更改Vue的中括号**
 
 ```js
+//改成其他 例如："{[ ]}"等等，修改方式如下：
 Vue.config.delimiters = ["{[", "]}"]
 或者
 new Vue({
@@ -48,4 +47,3 @@ new Vue({
   data:{}
  })
 ```
-
