@@ -19,7 +19,7 @@
     <meta name="description" content="实现Vue根据token拦截访问页面实现步骤1.前端登录，把用户信息传到后端。 2.后端验证通过后生成token返回前端。 3.前端获取token后用vuex和localStorage管理，进入其他页面。 4.之后前端每一次权限操作如跳转路由，都需要判断是否存在token，若不存在，跳转至登录页。 5.前端的请求操作都要在请求头带上token，后端验证请求头有token之后才开放接口。 6.如果t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue编写token的登录验证">
-<meta property="og:url" content="http://example.com/2022/06/27/Vue%E7%BC%96%E5%86%99token%E7%9A%84%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81/index.html">
+<meta property="og:url" content="https://evanyangtobegreatest.github.io/2022/06/27/Vue%E7%BC%96%E5%86%99token%E7%9A%84%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81/index.html">
 <meta property="og:site_name" content="EvanYoung">
 <meta property="og:description" content="实现Vue根据token拦截访问页面实现步骤1.前端登录，把用户信息传到后端。 2.后端验证通过后生成token返回前端。 3.前端获取token后用vuex和localStorage管理，进入其他页面。 4.之后前端每一次权限操作如跳转路由，都需要判断是否存在token，若不存在，跳转至登录页。 5.前端的请求操作都要在请求头带上token，后端验证请求头有token之后才开放接口。 6.如果t">
 <meta property="og:locale" content="zh_CN">
@@ -68,7 +68,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"evanyangtobegreatest.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -327,7 +327,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Vue编写token的登录验证</div>
-      <div>http://example.com/2022/06/27/Vue编写token的登录验证/</div>
+      <div>https://evanyangtobegreatest.github.io/2022/06/27/Vue编写token的登录验证/</div>
     </div>
     <div class="license-meta">
       
