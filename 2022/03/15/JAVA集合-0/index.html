@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/myblog/img/fluid.png">
-  <link rel="icon" href="/myblog/img/logo.PNG">
+  <link rel="apple-touch-icon" sizes="76x76" href="/EvanYangtobegreatest/EvanYangtobegreatest/img/fluid.png">
+  <link rel="icon" href="/EvanYangtobegreatest/EvanYangtobegreatest/img/logo.PNG">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,18 +19,18 @@
     <meta name="description" content="Java集合 集合概述 概念：对象的容器，定义了多个对象进行操作的常用方法。可实现  数组的功能。  和数组的区别： 1.数组长度固定，集合长度不固定。 2.数组可以存储基本类型和引用类型，集合只能存储引用类型。  Java引用包：java.util.*;    Collection体系集合  Collection父接口 特点：代表一组任意类型的对象，无序、无下标、不能重复。  方法：  bool">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JAVA集合">
-<meta property="og:url" content="https://yangyewen.gitee.io/myblog/2022/03/15/JAVA%E9%9B%86%E5%90%88-0/index.html">
+<meta property="og:url" content="https://github.com/EvanYangtobegreatest/EvanYangtobegreatest/2022/03/15/JAVA%E9%9B%86%E5%90%88-0/index.html">
 <meta property="og:site_name" content="EvanYoung">
 <meta property="og:description" content="Java集合 集合概述 概念：对象的容器，定义了多个对象进行操作的常用方法。可实现  数组的功能。  和数组的区别： 1.数组长度固定，集合长度不固定。 2.数组可以存储基本类型和引用类型，集合只能存储引用类型。  Java引用包：java.util.*;    Collection体系集合  Collection父接口 特点：代表一组任意类型的对象，无序、无下标、不能重复。  方法：  bool">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://yangyewen.gitee.io/myblog/img/bg1.jpg">
+<meta property="og:image" content="https://github.com/EvanYangtobegreatest/EvanYangtobegreatest/img/bg1.jpg">
 <meta property="article:published_time" content="2022-03-15T02:22:20.000Z">
 <meta property="article:modified_time" content="2022-05-30T08:49:51.148Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="集合">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://yangyewen.gitee.io/myblog/img/bg1.jpg">
+<meta name="twitter:image" content="https://github.com/EvanYangtobegreatest/EvanYangtobegreatest/img/bg1.jpg">
   
   
   
@@ -58,12 +58,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/myblog/css/main.css" />
+<link  rel="stylesheet" href="/EvanYangtobegreatest/EvanYangtobegreatest/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/myblog/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/EvanYangtobegreatest/EvanYangtobegreatest/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/myblog/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/EvanYangtobegreatest/EvanYangtobegreatest/css/highlight-dark.css" />
   
 
 
@@ -72,18 +72,18 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"yangyewen.gitee.io","root":"/myblog/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/myblog/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/EvanYangtobegreatest/EvanYangtobegreatest/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/EvanYangtobegreatest/EvanYangtobegreatest/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/myblog/js/utils.js" ></script>
-  <script  src="/myblog/js/color-schema.js" ></script>
+  <script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/utils.js" ></script>
+  <script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/color-schema.js" ></script>
 
   
-<meta name="generator" content="Hexo 5.4.1"><link rel="stylesheet" href="/myblog/css/prism.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.1"><link rel="stylesheet" href="/EvanYangtobegreatest/EvanYangtobegreatest/css/prism.css" type="text/css"></head>
 
 
 <body>
@@ -95,7 +95,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/myblog/">
+    <a class="navbar-brand" href="/EvanYangtobegreatest/EvanYangtobegreatest/">
       <strong>EvanYoung</strong>
     </a>
 
@@ -114,7 +114,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/myblog/">
+              <a class="nav-link" href="/EvanYangtobegreatest/EvanYangtobegreatest/">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -126,7 +126,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/myblog/archives/">
+              <a class="nav-link" href="/EvanYangtobegreatest/EvanYangtobegreatest/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 归档
               </a>
@@ -138,7 +138,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/myblog/categories/">
+              <a class="nav-link" href="/EvanYangtobegreatest/EvanYangtobegreatest/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 分类
               </a>
@@ -150,7 +150,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/myblog/tags/">
+              <a class="nav-link" href="/EvanYangtobegreatest/EvanYangtobegreatest/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 标签
               </a>
@@ -162,7 +162,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/myblog/about/">
+              <a class="nav-link" href="/EvanYangtobegreatest/EvanYangtobegreatest/about/">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -191,7 +191,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/myblog/img/bg10.png') no-repeat center center; background-size: cover;">
+     style="background: url('/EvanYangtobegreatest/EvanYangtobegreatest/img/bg10.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -285,7 +285,7 @@
 </li>
 </ul>
 <hr>
-<h2 id="Collection体系集合"><a href="#Collection体系集合" class="headerlink" title="Collection体系集合"></a>Collection体系集合</h2><p><img src="/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE1.PNG" srcset="/myblog/img/loading.gif" lazyload></p>
+<h2 id="Collection体系集合"><a href="#Collection体系集合" class="headerlink" title="Collection体系集合"></a>Collection体系集合</h2><p><img src="/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE1.PNG" srcset="/EvanYangtobegreatest/EvanYangtobegreatest/img/loading.gif" lazyload></p>
 <hr>
 <h2 id="Collection父接口"><a href="#Collection父接口" class="headerlink" title="Collection父接口"></a>Collection父接口</h2><ul>
 <li><p>特点：代表一组任意类型的对象，无序、无下标、不能重复。</p>
@@ -406,17 +406,17 @@
 
 <p>假设刚开始new了一个LinkedList对象，first和last属性都为空，调用add进入到linkLast方法。</p>
 <p>首先创建一个Node变量 l 将last（此时为空）赋给它，然后new一个newNode变量存储数据，并且它的前驱指向l，后继指向null；再把last指向newNode。如下图所示：</p>
-<p><img src="/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE2.PNG" srcset="/myblog/img/loading.gif" lazyload></p>
+<p><img src="/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE2.PNG" srcset="/EvanYangtobegreatest/EvanYangtobegreatest/img/loading.gif" lazyload></p>
 <p>如果满足if条件，说明这是添加的第一个结点，将first指向newNode：</p>
-<p><img src="/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE3.PNG" srcset="/myblog/img/loading.gif" lazyload></p>
+<p><img src="/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE3.PNG" srcset="/EvanYangtobegreatest/EvanYangtobegreatest/img/loading.gif" lazyload></p>
 <p>至此，LinkedList对象的第一个数据添加完毕。假设需要再添加一个数据，我们可以再来走一遍，过程同上不再赘述，图示如下：</p>
-<p><img src="/img/java%E9%9B%86%E5%90%88/Java%E9%9B%86%E5%90%88%E5%9B%BE4.PNG" srcset="/myblog/img/loading.gif" lazyload></p>
+<p><img src="/img/java%E9%9B%86%E5%90%88/Java%E9%9B%86%E5%90%88%E5%9B%BE4.PNG" srcset="/EvanYangtobegreatest/EvanYangtobegreatest/img/loading.gif" lazyload></p>
 <hr>
 <h2 id="ArrayList和LinkedList区别"><a href="#ArrayList和LinkedList区别" class="headerlink" title="ArrayList和LinkedList区别"></a>ArrayList和LinkedList区别</h2><ul>
 <li><p>ArrayList：必须开辟连续空间，查询快，增删慢。</p>
 </li>
 <li><p>LinkedList：无需开辟连续空间，查询慢，增删快。</p>
-<p><img src="/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE5.PNG" srcset="/myblog/img/loading.gif" lazyload></p>
+<p><img src="/img/java%E9%9B%86%E5%90%88/java%E9%9B%86%E5%90%88%E5%9B%BE5.PNG" srcset="/EvanYangtobegreatest/EvanYangtobegreatest/img/loading.gif" lazyload></p>
 </li>
 </ul>
 <hr>
@@ -661,7 +661,7 @@
     
       <span class="category-chain">
         
-  <a href="/myblog/categories/Java%E5%9F%BA%E7%A1%80/" class="category-chain-item">Java基础</a>
+  <a href="/EvanYangtobegreatest/EvanYangtobegreatest/categories/Java%E5%9F%BA%E7%A1%80/" class="category-chain-item">Java基础</a>
   
   
 
@@ -676,9 +676,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/myblog/tags/Java/">#Java</a>
+        <a href="/EvanYangtobegreatest/EvanYangtobegreatest/tags/Java/">#Java</a>
       
-        <a href="/myblog/tags/%E9%9B%86%E5%90%88/">#集合</a>
+        <a href="/EvanYangtobegreatest/EvanYangtobegreatest/tags/%E9%9B%86%E5%90%88/">#集合</a>
       
     </div>
   
@@ -691,7 +691,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>JAVA集合</div>
-      <div>https://yangyewen.gitee.io/myblog/2022/03/15/JAVA集合-0/</div>
+      <div>https://github.com/EvanYangtobegreatest/EvanYangtobegreatest/2022/03/15/JAVA集合-0/</div>
     </div>
     <div class="license-meta">
       
@@ -733,7 +733,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/myblog/2022/03/16/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/" title="动态代理">
+                      <a href="/EvanYangtobegreatest/EvanYangtobegreatest/2022/03/16/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/" title="动态代理">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">动态代理</span>
                         <span class="visible-mobile">上一篇</span>
@@ -743,7 +743,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/myblog/2022/03/15/Web/" title="Web">
+                      <a href="/EvanYangtobegreatest/EvanYangtobegreatest/2022/03/15/Web/" title="Web">
                         <span class="hidden-mobile">Web</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -866,7 +866,7 @@
         >
           
             <span style="visibility: hidden; width: 0">|</span>
-            <img src="/myblog/img/police_beian.png" srcset="/myblog/img/loading.gif" lazyload alt="police-icon"/>
+            <img src="/EvanYangtobegreatest/EvanYangtobegreatest/img/police_beian.png" srcset="/EvanYangtobegreatest/EvanYangtobegreatest/img/loading.gif" lazyload alt="police-icon"/>
           
           <span>粤公网安备 44011402000758号</span>
         </a>
@@ -897,8 +897,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/myblog/js/events.js" ></script>
-<script  src="/myblog/js/plugins.js" ></script>
+<script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/events.js" ></script>
+<script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -922,7 +922,7 @@
 
 
   
-    <script  src="/myblog/js/img-lazyload.js" ></script>
+    <script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/img-lazyload.js" ></script>
   
 
 
@@ -1059,7 +1059,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/myblog/js/local-search.js" ></script>
+  <script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/local-search.js" ></script>
 
 
 
@@ -1067,7 +1067,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/myblog/js/boot.js" ></script>
+<script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/boot.js" ></script>
 
 
   
