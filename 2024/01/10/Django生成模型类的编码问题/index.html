@@ -16,12 +16,12 @@
   <meta name="author" content="Evan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Django生成模型类的编码问题利用Django的ORM，将数据表变成Django中的模型类。 1python manage.py inspectdb &gt; 应用名&#x2F;models.py  有了Django框架的ORM，我们可以直接使用面向对象的方式来实现对数据的CRUD（增删改查）操作。我们可以在PyCharm的终端中输入下面的命令进入到Django项目的交互式环境，然后尝试对模型的操作。 1">
+    <meta name="description" content="Django生成模型类的编码问题利用Django的ORM，将数据表变成Django中的模型类。 1python manage.py inspectdb &gt; 应用名&#x2F;models.py  有了Django框架的ORM，我们可以直接使用面向对象的方式来实现对数据的CRUD（增删改查）操作。我们可以在PyCharm的终端中输入下面的命令进入到Django项目的交互式环境，然后尝试对模型的操作。 1pyt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django生成模型类的编码问题">
 <meta property="og:url" content="https://github.com/EvanYangtobegreatest/EvanYangtobegreatest/2024/01/10/Django%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B%E7%B1%BB%E7%9A%84%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="EvanYoung">
-<meta property="og:description" content="Django生成模型类的编码问题利用Django的ORM，将数据表变成Django中的模型类。 1python manage.py inspectdb &gt; 应用名&#x2F;models.py  有了Django框架的ORM，我们可以直接使用面向对象的方式来实现对数据的CRUD（增删改查）操作。我们可以在PyCharm的终端中输入下面的命令进入到Django项目的交互式环境，然后尝试对模型的操作。 1">
+<meta property="og:description" content="Django生成模型类的编码问题利用Django的ORM，将数据表变成Django中的模型类。 1python manage.py inspectdb &gt; 应用名&#x2F;models.py  有了Django框架的ORM，我们可以直接使用面向对象的方式来实现对数据的CRUD（增删改查）操作。我们可以在PyCharm的终端中输入下面的命令进入到Django项目的交互式环境，然后尝试对模型的操作。 1pyt">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-10T08:42:19.000Z">
 <meta property="article:modified_time" content="2024-01-10T06:19:22.792Z">
@@ -270,13 +270,13 @@
             <div class="markdown-body">
               
               <h2 id="Django生成模型类的编码问题"><a href="#Django生成模型类的编码问题" class="headerlink" title="Django生成模型类的编码问题"></a>Django生成模型类的编码问题</h2><p>利用Django的ORM，将数据表变成Django中的模型类。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">python manage.py inspectdb &gt; 应用名/models.py<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">python manage.py inspectdb > 应用名/models.py<br></code></pre></td></tr></table></figure>
 
 <p>有了Django框架的ORM，我们可以直接使用面向对象的方式来实现对数据的CRUD（增删改查）操作。我们可以在PyCharm的终端中输入下面的命令进入到Django项目的交互式环境，然后尝试对模型的操作。</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-keyword">python</span> manage.<span class="hljs-keyword">py</span> <span class="hljs-keyword">shell</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs vim"><span class="hljs-keyword">python</span> manage.<span class="hljs-keyword">py</span> <span class="hljs-keyword"><code class="language-hljs vim"><span class="hljs-keyword">python</span> manage.<span class="hljs-keyword">py</span> <span class="hljs-keyword">shell</span><br></code></pre></td></tr></table></figure>
 
 <p>然后会报错误：</p>
-<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gauss">ValueError: source <span class="hljs-built_in">code</span> <span class="hljs-keyword">string</span> cannot contain <span class="hljs-built_in">null</span> bytes<br></code></pre></td></tr></table></figure>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs gauss">ValueError: source <span class="hljs-built_in">code</span> <span class="hljs-keyword">string</span> cannot contain <span class="hljs-built_in"><code class="language-hljs gauss">ValueError: source <span class="hljs-built_in">code</span> <span class="hljs-keyword">string</span> cannot contain <span class="hljs-built_in">null</span> bytes<br></code></pre></td></tr></table></figure>
 
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>该问题是因为生成的文件编码问题，将models.py的内容改成UTF-8格式即刻解决</p>
 

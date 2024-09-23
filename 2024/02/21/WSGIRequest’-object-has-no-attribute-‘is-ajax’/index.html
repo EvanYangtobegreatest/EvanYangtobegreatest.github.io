@@ -270,13 +270,13 @@
             <div class="markdown-body">
               
               <h3 id="中间件权限校验的Ajax请求判断的版本问题"><a href="#中间件权限校验的Ajax请求判断的版本问题" class="headerlink" title="中间件权限校验的Ajax请求判断的版本问题"></a>中间件权限校验的Ajax请求判断的版本问题</h3><p>使用中间件权限校验，判断是不是Ajax请求时产生报错：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">WSGIRequest’ object has no attribute ‘is_ajax’<br></code></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs text"><code class="language-hljs text">WSGIRequest’ object has no attribute ‘is_ajax’<br></code></pre></td></tr></table></figure>
 
 <p>django更新至4.0取消了request.is_ajax()这个判断；4.0版本的django可以使用以下代替：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">request.headers.<span class="hljs-built_in">get</span>(<span class="hljs-string">&#x27;x-requested-with&#x27;</span>) == <span class="hljs-string">&#x27;XMLHttpRequest&#x27;</span>:<br></code></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs routeros">request.headers.<span class="hljs-built_in">get</span>(<span class="hljs-string">&#x27;x-requested-with&#x27;</span>) == <span class="hljs-string"><code class="language-hljs routeros">request.headers.<span class="hljs-built_in">get</span>(<span class="hljs-string">&#x27;x-requested-with&#x27;</span>) == <span class="hljs-string">&#x27;XMLHttpRequest&#x27;</span>:<br></code></pre></td></tr></table></figure>
 
 <p>也可以将django版本降低，就可以继续使用：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">request.is_ajax()<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">request.is_ajax()<br></code></pre></td></tr></table></figure>
 
 
               

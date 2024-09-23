@@ -275,22 +275,22 @@
 <p><strong>2.通过Xftp、Xshell连接远程服务器。</strong></p>
 <p><strong>3.将步骤1中保存的本地sql文件通过Xftp上传到服务器的文件夹中(路径随意)，记住这个上传路径。(例：/usr/mydatabase/shuju.sql)</strong></p>
 <h4 id="服务器中的操作"><a href="#服务器中的操作" class="headerlink" title="服务器中的操作"></a>服务器中的操作</h4><p><strong>4.在Xshell中输入mysql -u root -p,输入正确密码进入服务器数据库中；</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">mysql -u root -p<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs mysql"><code class="language-hljs mysql">mysql -u root -p<br></code></pre></td></tr></table></figure>
 
 <p><strong>5.进入mysql后创建一个数据库，名字与导入的sql文件一致；</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">create database shuju;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs mysql"><code class="language-hljs mysql">create database shuju;<br></code></pre></td></tr></table></figure>
 
 <p><strong>6.退出mysql</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">exit;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs mysql"><code class="language-hljs mysql">exit;<br></code></pre></td></tr></table></figure>
 
 <p><strong>7.执行命令sudo mysqldum完整如下</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs Linux">//sudo mysqldump -u root -p &#x27;数据库名&#x27; &lt; &#x27;sql文件的路径&#x27;;<br>sudo mysqldump -u root -p shuju &lt; /usr/mydatabase/shuju.sql;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class=" language-hljs Linux"><code class="language-hljs Linux">//sudo mysqldump -u root -p &#x27;数据库名&#x27; < &#x27;sql文件的路径&#x27;;<br>sudo mysqldump -u root -p shuju < /usr/mydatabase/shuju.sql;<br></code></pre></td></tr></table></figure>
 
 <p><strong>8.进入mysql，执行use shuju</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql">mysql -u root -p;<br>use shuju;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class=" language-hljs mysql"><code class="language-hljs mysql">mysql -u root -p;<br>use shuju;<br></code></pre></td></tr></table></figure>
 
 <p><strong>9.然后执行source操作,source+sql路径</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">source  /usr/mydatabase/shuju.sql;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre class=" language-hljs mysql"><code class="language-hljs mysql">source  /usr/mydatabase/shuju.sql;<br></code></pre></td></tr></table></figure>
 
 <p><strong>到这里，已经完成了数据库的上传。</strong></p>
 
