@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/EvanYangtobegreatest/img/fluid.png">
-  <link rel="icon" href="/EvanYangtobegreatest/img/logo.PNG">
+  <link rel="apple-touch-icon" sizes="76x76" href="/EvanYangtobegreatest/EvanYangtobegreatest/img/fluid.png">
+  <link rel="icon" href="/EvanYangtobegreatest/EvanYangtobegreatest/img/logo.PNG">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,7 +19,7 @@
     <meta name="description" content="Java后端实现token的生成和验证在Java后端实现token登录功能 什么是token？token的意思是“令牌”，是服务端生成的一串字符串，作为客户端进行请求的一个标识。 当用户第一次登录后，服务器生成一个token并将此token返回给客户端，以后客户端只需带上这个token前来请求数据即可，无需再次带上用户名和密码。 简单token的组成；uid(用户唯一的身份标识)、time(当前时">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java后端实现token的生成和验证">
-<meta property="og:url" content="https://github.com/EvanYangtobegreatest/2022/06/27/Java%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0token%E7%9A%84%E7%94%9F%E6%88%90%E5%92%8C%E9%AA%8C%E8%AF%81/index.html">
+<meta property="og:url" content="https://github.com/EvanYangtobegreatest/EvanYangtobegreatest/2022/06/27/Java%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0token%E7%9A%84%E7%94%9F%E6%88%90%E5%92%8C%E9%AA%8C%E8%AF%81/index.html">
 <meta property="og:site_name" content="EvanYoung">
 <meta property="og:description" content="Java后端实现token的生成和验证在Java后端实现token登录功能 什么是token？token的意思是“令牌”，是服务端生成的一串字符串，作为客户端进行请求的一个标识。 当用户第一次登录后，服务器生成一个token并将此token返回给客户端，以后客户端只需带上这个token前来请求数据即可，无需再次带上用户名和密码。 简单token的组成；uid(用户唯一的身份标识)、time(当前时">
 <meta property="og:locale" content="zh_CN">
@@ -54,12 +54,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/EvanYangtobegreatest/css/main.css" />
+<link  rel="stylesheet" href="/EvanYangtobegreatest/EvanYangtobegreatest/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/EvanYangtobegreatest/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/EvanYangtobegreatest/EvanYangtobegreatest/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/EvanYangtobegreatest/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/EvanYangtobegreatest/EvanYangtobegreatest/css/highlight-dark.css" />
   
 
 
@@ -68,18 +68,18 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"github.com","root":"/EvanYangtobegreatest/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/EvanYangtobegreatest/local-search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/EvanYangtobegreatest/EvanYangtobegreatest/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/EvanYangtobegreatest/EvanYangtobegreatest/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/EvanYangtobegreatest/js/utils.js" ></script>
-  <script  src="/EvanYangtobegreatest/js/color-schema.js" ></script>
+  <script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/utils.js" ></script>
+  <script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/color-schema.js" ></script>
 
   
-<meta name="generator" content="Hexo 5.4.1"><link rel="stylesheet" href="/EvanYangtobegreatest/css/prism.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.1"><link rel="stylesheet" href="/EvanYangtobegreatest/EvanYangtobegreatest/css/prism.css" type="text/css"></head>
 
 
 <body>
@@ -91,7 +91,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/EvanYangtobegreatest/">
+    <a class="navbar-brand" href="/EvanYangtobegreatest/EvanYangtobegreatest/">
       <strong>EvanYoung</strong>
     </a>
 
@@ -110,7 +110,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/EvanYangtobegreatest/">
+              <a class="nav-link" href="/EvanYangtobegreatest/EvanYangtobegreatest/">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -122,7 +122,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/EvanYangtobegreatest/archives/">
+              <a class="nav-link" href="/EvanYangtobegreatest/EvanYangtobegreatest/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 归档
               </a>
@@ -134,7 +134,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/EvanYangtobegreatest/categories/">
+              <a class="nav-link" href="/EvanYangtobegreatest/EvanYangtobegreatest/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 分类
               </a>
@@ -146,7 +146,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/EvanYangtobegreatest/tags/">
+              <a class="nav-link" href="/EvanYangtobegreatest/EvanYangtobegreatest/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 标签
               </a>
@@ -158,7 +158,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/EvanYangtobegreatest/about/">
+              <a class="nav-link" href="/EvanYangtobegreatest/EvanYangtobegreatest/about/">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -187,7 +187,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/EvanYangtobegreatest/img/bg10.png') no-repeat center center; background-size: cover;">
+     style="background: url('/EvanYangtobegreatest/EvanYangtobegreatest/img/bg10.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -308,7 +308,7 @@
     
       <span class="category-chain">
         
-  <a href="/EvanYangtobegreatest/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
+  <a href="/EvanYangtobegreatest/EvanYangtobegreatest/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
   
   
 
@@ -329,7 +329,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Java后端实现token的生成和验证</div>
-      <div>https://github.com/EvanYangtobegreatest/2022/06/27/Java后端实现token的生成和验证/</div>
+      <div>https://github.com/EvanYangtobegreatest/EvanYangtobegreatest/2022/06/27/Java后端实现token的生成和验证/</div>
     </div>
     <div class="license-meta">
       
@@ -371,7 +371,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/EvanYangtobegreatest/2022/06/27/Vue%E7%BC%96%E5%86%99token%E7%9A%84%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81/" title="Vue编写token的登录验证">
+                      <a href="/EvanYangtobegreatest/EvanYangtobegreatest/2022/06/27/Vue%E7%BC%96%E5%86%99token%E7%9A%84%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81/" title="Vue编写token的登录验证">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">Vue编写token的登录验证</span>
                         <span class="visible-mobile">上一篇</span>
@@ -381,7 +381,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/EvanYangtobegreatest/2022/06/27/%E4%BA%AB%E7%96%97%E5%85%B1%E4%BA%AB%E5%8C%BB%E7%94%9F%E7%B3%BB%E7%BB%9F/" title="享疗共享医生系统">
+                      <a href="/EvanYangtobegreatest/EvanYangtobegreatest/2022/06/27/%E4%BA%AB%E7%96%97%E5%85%B1%E4%BA%AB%E5%8C%BB%E7%94%9F%E7%B3%BB%E7%BB%9F/" title="享疗共享医生系统">
                         <span class="hidden-mobile">享疗共享医生系统</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -504,7 +504,7 @@
         >
           
             <span style="visibility: hidden; width: 0">|</span>
-            <img src="/EvanYangtobegreatest/img/police_beian.png" srcset="/EvanYangtobegreatest/img/loading.gif" lazyload alt="police-icon"/>
+            <img src="/EvanYangtobegreatest/EvanYangtobegreatest/img/police_beian.png" srcset="/EvanYangtobegreatest/EvanYangtobegreatest/img/loading.gif" lazyload alt="police-icon"/>
           
           <span>粤公网安备 44011402000758号</span>
         </a>
@@ -535,8 +535,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/EvanYangtobegreatest/js/events.js" ></script>
-<script  src="/EvanYangtobegreatest/js/plugins.js" ></script>
+<script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/events.js" ></script>
+<script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -560,7 +560,7 @@
 
 
   
-    <script  src="/EvanYangtobegreatest/js/img-lazyload.js" ></script>
+    <script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/img-lazyload.js" ></script>
   
 
 
@@ -697,7 +697,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/EvanYangtobegreatest/js/local-search.js" ></script>
+  <script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/local-search.js" ></script>
 
 
 
@@ -705,7 +705,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/EvanYangtobegreatest/js/boot.js" ></script>
+<script  src="/EvanYangtobegreatest/EvanYangtobegreatest/js/boot.js" ></script>
 
 
   
