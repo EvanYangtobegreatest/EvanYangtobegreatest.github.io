@@ -13,24 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="Evan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="12345title: &amp;#x27;Django使用Vue在html中按&amp;#123;&amp;#123;&amp;#125;&amp;#125;取值失败的解决办法&amp;#x27;date: 2024-02-22 17:12:06author: Evancategories: 笔记title: &amp;#x27;Django使用Vue在html中按&amp;#123;&amp;#123;&amp;#125;&amp;#125;取值失败的解决办法&amp;#x27;date">
+    <meta name="description" content="因为django本身有模版的概念，直接取值是从django的模版中取值的 而在vue的v-for中想要获取遍历之后的数据， 直接用方式取值，会取到None 这时候就需要进行特殊处理，解决办法为： 1、禁用Django的模版 12345678910111213141516&amp;#123;% verbatim %&amp;#125;&amp;#123;% endverbatim %&amp;#125;在需要不解析的DOM 上下">
 <meta property="og:type" content="article">
-<meta property="og:title" content="EvanYoung">
+<meta property="og:title" content="Django使用Vue在html中按{{}}取值失败的解决办法">
 <meta property="og:url" content="https://evanyangtobegreatest.github.io/2024/02/22/Django%E4%BD%BF%E7%94%A8Vue%E5%9C%A8html%E4%B8%AD%E6%8C%89-%E5%8F%96%E5%80%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/index.html">
 <meta property="og:site_name" content="EvanYoung">
-<meta property="og:description" content="12345title: &amp;#x27;Django使用Vue在html中按&amp;#123;&amp;#123;&amp;#125;&amp;#125;取值失败的解决办法&amp;#x27;date: 2024-02-22 17:12:06author: Evancategories: 笔记title: &amp;#x27;Django使用Vue在html中按&amp;#123;&amp;#123;&amp;#125;&amp;#125;取值失败的解决办法&amp;#x27;date">
+<meta property="og:description" content="因为django本身有模版的概念，直接取值是从django的模版中取值的 而在vue的v-for中想要获取遍历之后的数据， 直接用方式取值，会取到None 这时候就需要进行特殊处理，解决办法为： 1、禁用Django的模版 12345678910111213141516&amp;#123;% verbatim %&amp;#125;&amp;#123;% endverbatim %&amp;#125;在需要不解析的DOM 上下">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-02-22T09:12:06.589Z">
-<meta property="article:modified_time" content="2024-05-17T02:57:34.308Z">
+<meta property="article:published_time" content="2024-02-22T09:12:06.000Z">
+<meta property="article:modified_time" content="2024-09-24T02:17:59.867Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>EvanYoung</title>
+  <title>Django使用Vue在html中按{{}}取值失败的解决办法 - EvanYoung</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,7 +193,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="Django使用Vue在html中按{{}}取值失败的解决办法"></span>
           
         </div>
 
@@ -216,7 +216,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          967 字
         
       </span>
     
@@ -227,7 +227,7 @@
         
         
         
-          10 分钟
+          9 分钟
         
       </span>
     
@@ -265,13 +265,11 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">Django使用Vue在html中按{{}}取值失败的解决办法</h1>
             
             <div class="markdown-body">
               
-              <figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre class=" language-hljs subunit">title: &#x27;Django使用Vue在html中按&#123;&#123;&#125;&#125;取值失败的解决办法&#x27;<br>date: 2024<span class="hljs-string">-02</span><span class="hljs-string">-22</span> 17:12:06<br>author: Evan<br>categories: 笔记<br><span class="hljs-keyword"><code class="language-hljs subunit">title: &#x27;Django使用Vue在html中按&#123;&#123;&#125;&#125;取值失败的解决办法&#x27;<br>date: 2024<span class="hljs-string">-02</span><span class="hljs-string">-22</span> 17:12:06<br>author: Evan<br>categories: 笔记<br><span class="hljs-keyword">tags:</span><br></code></pre></td></tr></table></figure>
-
-<p>因为django本身有模版的概念，直接取值是从django的模版中取值的</p>
+              <p>因为django本身有模版的概念，直接取值是从django的模版中取值的</p>
 <p>而在vue的v-for中想要获取遍历之后的数据，</p>
 <p>直接用方式取值，会取到None</p>
 <p>这时候就需要进行特殊处理，解决办法为：</p>
@@ -287,6 +285,27 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
 </div>
 
@@ -296,14 +315,14 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
+      <div>Django使用Vue在html中按{{}}取值失败的解决办法</div>
       <div>https://evanyangtobegreatest.github.io/2024/02/22/Django使用Vue在html中按-取值失败的解决办法/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>John Doe</div>
+          <div>Evan</div>
         </div>
       
       

@@ -276,14 +276,14 @@
       <h1 class="index-header">
         
         <a href="/2024/02/22/Django%E4%BD%BF%E7%94%A8Vue%E5%9C%A8html%E4%B8%AD%E6%8C%89-%E5%8F%96%E5%80%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" target="_self">
-          
+          Django使用Vue在html中按{{}}取值失败的解决办法
         </a>
       </h1>
 
       <a class="index-excerpt" href="/2024/02/22/Django%E4%BD%BF%E7%94%A8Vue%E5%9C%A8html%E4%B8%AD%E6%8C%89-%E5%8F%96%E5%80%BC%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" target="_self">
         <div>
           
-          12345title: &amp;#x27;Django使用Vue在html中按&amp;#123;&amp;#123;&amp;#125;&amp;#125;取值失败的解决办法&amp;#x27;date: 2024-02-22 17:12:06author: Evancategories: 笔记title: &amp;#x27;Django使用Vue在html中按&amp;#123;&amp;#123;&amp;#125;&amp;#125;取值失败的解决办法&amp;#x27;date
+          因为django本身有模版的概念，直接取值是从django的模版中取值的 而在vue的v-for中想要获取遍历之后的数据， 直接用方式取值，会取到None 这时候就需要进行特殊处理，解决办法为： 1、禁用Django的模版 12345678910111213141516&amp;#123;% verbatim %&amp;#125;&amp;#123;% endverbatim %&amp;#125;在需要不解析的DOM 上下
         </div>
       </a>
 
@@ -296,6 +296,27 @@
             </time>
           </div>
         
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
         
         
       </div>
